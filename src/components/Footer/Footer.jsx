@@ -65,7 +65,7 @@ const Footer = () => {
             Send Your Feedback
           </h1>
 
-          <form   id="name" name="name" action="#" method="post">
+          <form id="name" name="name" action="#" method="post">
             <textarea
               name="comment"
               placeholder="Write your comment..."

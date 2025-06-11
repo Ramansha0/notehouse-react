@@ -7,7 +7,7 @@ const Navbar = () => {
         <img className="img1" src="logo.png" alt="Logo" />
       </div>
       <div className="back">
-        <input className="search" placeholder="Search" />
+        <input id='search' className="search" placeholder="Search" />
         <i className="fa-solid fa-magnifying-glass"></i>
       </div>
       <ul className="nav-list" style={{ border: 'none', boxShadow: 'none' }}>
