@@ -34,8 +34,8 @@ const Secondl = () => {
                   style={{
                     fontSize: '20px',
                     fontWeight: '600',
-                    marginTop: '5px',
-                    marginLeft: '0px',
+                    marginTop: '-20px',
+                    marginLeft: '30px',
                   }}
                 >
                   Revised Physics Notes
@@ -73,8 +73,8 @@ const Secondl = () => {
                   style={{
                     fontSize: '20px',
                     fontWeight: '600',
-                    marginTop: '5px',
-                    marginLeft: '0px',
+                    marginTop: '-20px',
+                    marginLeft: '30px',
                   }}
                 >
                   Revised Computer Notes
@@ -119,8 +119,8 @@ const Secondl = () => {
                   style={{
                     fontSize: '20px',
                     fontWeight: '600',
-                    marginTop: '5px',
-                    marginLeft: '0px',
+                    marginTop: '-20px',
+                    marginLeft: '30px',
                   }}
                 >
                   Revised English Notes

@@ -77,7 +77,7 @@ const Phy = () => {
       </p>
 
       <ul style={{ height: '500px', background: 'linear-gradient(20deg, #71b6ff 60%, white 40%)' }}>
-  
+
     <li><strong>Fundamental Physics</strong>: Introduction to the basic concepts and principles of physics that form the foundation for further studies.</li>
     <li><strong>Kinematics</strong>: Study of motion without considering the forces that cause it, focusing on concepts like displacement, velocity, and acceleration.</li>
     <li><strong>Dynamics</strong>: Examination of the forces and their effects on motion, including Newton's laws of motion.</li>
@@ -104,7 +104,7 @@ const Phy = () => {
           <button className="click">Click Here!</button>
         </div>
         <div className="ques" style={{ display: 'flex' }}>
-          <iframe className="area" src="path/to/your/physics-notes.pdf" title="Physics Notes"></iframe>
+          <iframe className="area" src="" title="Physics Notes"></iframe>
 
           <div style={{ width: '2px', marginLeft: '70px', height: '400px', backgroundColor: 'black', left: '50%', top: '0' }}></div>
 
