@@ -1,21 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar.jsx';
-import Footer from './components/Footer/Footer.jsx';
-import Secondlast from './components/Footer/Secondl.jsx';
-import Phy from './components/Phy.jsx';
+import Body from './components/Body1/Body.jsx';
+import Foot from './components/Footer/Foot.jsx';
+import { initNotehouseScripts } from './utils/notehouse'; // your JS logic
+
 const App = () => {
+  useEffect(() => {
+    initNotehouseScripts();
+  }, []);
 
   return (
-  <div>
-    <Navbar />  
-  <Phy />
-    <Secondlast />
-  <Footer />
-    
-</div>
+    <div>
+      <Navbar />
+      <Body />
+      <Foot />
+    </div>
   );
 };
 
 export default App;
-

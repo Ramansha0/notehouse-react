@@ -1,9 +1,9 @@
 // src/main.jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route,  } from 'react-router-dom';
+import { BrowserRouter, Routes, Route,Link  } from 'react-router-dom';
 import App from './App.jsx';
-import First from './component1/First.jsx';
+import Physics from './Physics.jsx';
 
 
 function Layout() {
@@ -12,8 +12,8 @@ function Layout() {
     
       
       <Routes>
-        <Route path="/" element={<First />} />
-        <Route path="/notes" element={<App />} />
+        <Route path="/" element={<App/>} />
+        <Route path="/physics" element={<Physics />} />
       </Routes>
     </div>
   );
