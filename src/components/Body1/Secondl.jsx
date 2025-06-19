@@ -1,11 +1,11 @@
 import React from 'react'
-
+import '../../utils/subject.css';
 const Secondl = () => {
   return (
     <div>
+    <div className="contain">
     
-    
-      <h1 style={{ marginLeft: '50px' }}>Make sure you visited here too!</h1>
+      <h1 className='topper' >Make sure you visited here too!</h1>
 
       <div
         className="ending"
@@ -19,9 +19,9 @@ const Secondl = () => {
           <div className="left">
             <div
               style={{ width: '450px', height: '135px', marginTop: '30px' }}
-              className="boxes1"
+              className="boxes3"
             >
-              <p
+              <p className='paru1'
                 style={{
                   fontSize: '25px',
                   fontWeight: '600',
@@ -30,7 +30,7 @@ const Secondl = () => {
                 }}
               >
                 NEB CLASS - XI{' '}   </p>
-                <p
+                <p className='paru2'
                   style={{
                     fontSize: '20px',
                     fontWeight: '600',
@@ -41,7 +41,7 @@ const Secondl = () => {
                   Revised Physics Notes
                 </p>
         
-              <p
+              <p className='paru3'
                 style={{
                   fontSize: '14px',
                   marginLeft: '30px',
@@ -52,15 +52,15 @@ const Secondl = () => {
                 Here you can find almost every revised notes of chemistry . All
                 the summary and the short notes of the chapters ....
               </p>
-              <p style={{ fontSize: '9px', marginLeft: '30px', marginTop: '-4px' }}>
+              <p className='paru4' style={{ fontSize: '9px', marginLeft: '30px', marginTop: '-4px' }}>
                 Batch - 2081
               </p>
             </div>
-            <div
+                  <div
               style={{ width: '450px', height: '135px', marginTop: '30px' }}
-              className="boxes1"
+              className="boxes3"
             >
-              <p
+              <p className='paru1'
                 style={{
                   fontSize: '25px',
                   fontWeight: '600',
@@ -68,8 +68,8 @@ const Secondl = () => {
                   paddingTop: '10px',
                 }}
               >
-                NEB CLASS - XI</p>
-                <p
+                NEB CLASS - XI{' '}   </p>
+                <p className='paru2'
                   style={{
                     fontSize: '20px',
                     fontWeight: '600',
@@ -77,10 +77,10 @@ const Secondl = () => {
                     marginLeft: '30px',
                   }}
                 >
-                  Revised Computer Notes
+                  Revised Nepali Notes
                 </p>
-       
-              <p
+        
+              <p className='paru3'
                 style={{
                   fontSize: '14px',
                   marginLeft: '30px',
@@ -91,7 +91,7 @@ const Secondl = () => {
                 Here you can find almost every revised notes of chemistry . All
                 the summary and the short notes of the chapters ....
               </p>
-              <p style={{ fontSize: '9px', marginLeft: '30px', marginTop: '-4px' }}>
+              <p className='paru4' style={{ fontSize: '9px', marginLeft: '30px', marginTop: '-4px' }}>
                 Batch - 2081
               </p>
             </div>
@@ -104,7 +104,7 @@ const Secondl = () => {
                 marginTop: '100px',
                 marginLeft: '70px',
               }}
-              className="boxes1"
+              className="boxes3" id='boxes4'
             >
               <p
                 style={{
@@ -145,7 +145,7 @@ const Secondl = () => {
         </div>
       </div>
   
-    </div>
+    </div></div>
   )
 }
 

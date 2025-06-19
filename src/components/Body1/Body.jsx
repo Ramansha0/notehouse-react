@@ -1,9 +1,11 @@
 // src/component1/First.jsx
 import React from 'react';
-import '../../subject.css';
+import '../../utils/subject.css';
 import { Link } from 'react-router-dom';
-
+import { initNotehouseScripts } from '../../utils/notehouse';
 const Body = () => {
+
+
   
   return (
     <>
@@ -12,7 +14,7 @@ const Body = () => {
           Good choice for the quality assignments and notes.
           <span className="lang1">Warmly welcome</span>
         </div>
-        <img
+        <img id='name1'
           className="name1"
           src="https://i.pinimg.com/474x/34/ba/d9/34bad99147d6de21c84516dd093853dd.jpg"
           alt="Banner"
@@ -25,7 +27,7 @@ const Body = () => {
       </div>
 
       <div className="contents">
-      <button id="bt0" className="btn">Notes</button>
+      <button id="bt0" className="btn" onClick={() => document.getElementById("container-page")?.scrollIntoView({ behavior: "smooth" })}>Notes</button>
       </div>
 
       <div className="line"></div>
@@ -44,11 +46,11 @@ const Body = () => {
                   src="https://static.vecteezy.com/system/resources/thumbnails/004/251/195/small/learning-mathematics-of-education-and-knowledge-background-cartoon-illustration-science-technology-engineering-formula-or-basic-math-vector.jpg"
                   alt="Math"
                 />
-                <Link to="/" id="classy1" className="btn btn-secondary">Notes</Link>
+                <Link to="math" id="classy1" className="btn btn-secondary">Notes</Link>
               </div>
 
               <div className="course1">
-                <h3 className="ba1">Physics</h3>
+                <h3 className="ba1" >Physics</h3>
                 <img className="a1"
                   src="https://previews.123rf.com/images/captainvector/captainvector1703/captainvector170312672/74784719-physics-subject-icon.jpg"
                   alt="Physics"
@@ -63,7 +65,7 @@ const Body = () => {
                   alt="Chemistry"
                   style={{ height: '150px', objectFit: 'contain' }}
                 />
-                <Link to="/notes" id="classy3" className="btn btn-secondary">Notes</Link>
+                <Link to="/chemistry" id="classy3" className="btn btn-secondary">Notes</Link>
               </div>
             </div>
 
@@ -75,7 +77,7 @@ const Body = () => {
                   alt="Nepali"
                   style={{ height: '150px', objectFit: 'contain' }}
                 />
-                <Link to="/notes" id="classy4" className="btn btn-secondary">Notes</Link>
+                <Link  to="/nepali" id="classy4" className="btn btn-secondary">Notes</Link>
               </div>
 
               <div className="course1">
@@ -90,7 +92,7 @@ const Body = () => {
                 }}>
                   A
                 </h1>
-                <Link to="/notes" id="classy5" className="btn btn-secondary">Notes</Link>
+                <Link to="/english" id="classy5" className="btn btn-secondary">Notes</Link>
               </div>
 
               <div className="course1">
@@ -99,7 +101,7 @@ const Body = () => {
                   src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg"
                   alt="Computer"
                 />
-                <Link to="/notes" id="classy6" className="btn btn-secondary">Notes</Link>
+                <Link to="/computer" id="classy6" className="btn btn-secondary">Notes</Link>
               </div>
             </div>
           </div>
@@ -110,7 +112,7 @@ const Body = () => {
       <section className="features">
         <div id="container-page" className="container">
           <div className="cover">
-            <p className="head10">Class XI - Notes</p>
+            <p className="head10">Class XI - Books</p>
           </div>
 
           <div className="sat">

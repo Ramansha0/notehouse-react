@@ -1,0 +1,115 @@
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: None ;
+    color: Black;
+ 
+}
+
+.logo  {
+    text-decoration: none;
+    color: Black;
+    font-size: 24px;
+    font-weight: bold;
+    width:20px;
+    height:20px ;
+    margin-top:-50px
+}
+.search{
+ 
+  width:350px;
+  height:28px;
+  border:none;
+  margin-left:7px;
+  margin-top: -5px;
+  border-left: none;
+  outline: none;
+  font-size:15px
+}
+.search:focus{
+  border-color:transparent;
+}
+.back{
+  width:400px;
+  background-color:white ;height:35px;
+  align-items: center;
+  border-radius:20px;
+  border:2px solid black;
+  margin-left:200px;
+ 
+}
+.anything{
+  width:400px;
+   height:auto;
+   background-color:#1586ff;
+   z-index:20;
+   position: absolute;
+
+margin-top: 5px;
+display: none ;
+border-radius:5px;
+
+}
+.anything ul{
+  color : white ;
+  font-size: 17px;
+height:28px;
+text-align: left;
+padding-top:10px;
+
+
+}
+.anything ul:hover{
+  background-color:#498ea1
+}
+
+
+.img1{
+  background-size:cover;
+  margin-top: 4px;
+  HEIGHT:62px;
+  width:180px
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-list li {
+    position: relative;
+}
+
+.nav-list li a {
+    display: block;
+    color: Black;
+    text-align: center;
+    padding: 12px 20px;
+    text-decoration: none;
+}
+
+.nav-list li a:hover {
+    background-color: #48cae4;
+}
+
+
+.more-options {
+    position: relative;
+}
+
+.more-options-btn {
+    background-color: #0668ca;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+   
+}

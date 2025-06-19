@@ -1,30 +1,87 @@
 import { Link } from 'react-router-dom';
-import '../../App.css'
+import '../../App.css';
+import { FaSearch } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useState, useRef, useEffect } from 'react';
+import { MdCancel } from "react-icons/md";
+import { FaHome } from "react-icons/fa";
+import { IoCallSharp } from "react-icons/io5";
+import { FaUserAlt } from "react-icons/fa";
+import { TfiSharethis } from "react-icons/tfi";
 const Navbar = () => {
-  
+  const [show, setShow] = useState(false);
+  const [shut, setShut] = useState(false);
+
+  const sidebarRef = useRef(null);
+  const burgerRef = useRef(null);
+
+  const toggleSidebar = () => {
+    setShow(!show);
+    setShut(!show);
+  };
+
+  const close = () => {
+    setShow(false);
+    setShut(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target) &&
+        burgerRef.current &&
+        !burgerRef.current.contains(event.target)
+      ) {
+        close();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    
-    <div className="navbar">
-         <div className='loader10' id="loader10"></div>
-      <div className="logo">
-        <img className="img1" src="src\assets\logo.png" alt="Logo" />
+    <>
+      <div className="loader10" id="loader10"></div>
+      <div className="navbar" id="navbar">
+        <div className="logo">
+          <img id="img1" className="img1" src="src/assets/logo.png" alt="logo" />
+        </div>
+
+        <div id="back" className="back">
+          <input id="search" className="search" placeholder="Search" />
+          <FaSearch />
+          <div className="anything"></div>
+        </div>
+
+        <ul id="nav-list" className="nav-list" style={{ border: 'none', boxShadow: 'none' }}>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/" state={{ scrollTo: "contact-page" }} className="c-btn">Contact Us</Link></li>
+          <li><a className="perso" id="personal1">Personal Info</a></li>
+          <li><Link to="/" state={{ scrollTo: "about-section" }} className="about1">About Us</Link></li>
+        </ul>
+
+        <div id="burger" className="more-options-btn" onClick={toggleSidebar} ref={burgerRef}>
+          {shut ? (
+            <div className="cancel"><MdCancel /></div>
+          ) : (
+            <div className="burg"><GiHamburgerMenu /></div>
+          )}
+        </div>
+
+        <div id="dinchak" className={`box10 ${show ? "open" : ""}`} ref={sidebarRef}>
+          <ul>
+<li><Link to="/" style={{ textDecoration: "none", color: "white" }}>            <div className="cliked"><FaHome/> Home</div></Link></li>
+            <li><Link to="/" state={{ scrollTo: "contact-page" }} style={{ textDecoration: "none", color: "white" }} className="c-btn"><div className="cliked"> <IoCallSharp/> Contact Us</div></Link></li>
+            <li><a className="perso" id="personal1"> <FaUserAlt/> Personal Info</a></li>
+            <li><Link to="/" state={{ scrollTo: "about-section" }} style={{ textDecoration: "none", color: "white" }} className="about1"><div className="cliked"><TfiSharethis /> About Us</div></Link></li>
+          </ul>
+          <li><Link to="/physics" onClick={close} state={{ scrollto: "nextpage1" }} style={{ textDecoration: "none", color: "white" }}>            <div className="cliked">📝 Model Questions</div></Link></li>
+          <li><a id="bt0" onClick={() => { close(); document.getElementById("container-page")?.scrollIntoView({ behavior: "smooth" }) }} style={{ textDecoration: "none", color: "white" }}>            <div className="cliked">📂 Notes</div></a></li>
+        </div>
       </div>
-      <div className="back">
-        <input id='search' className="search" placeholder="Search" />
-        <i className="fa-solid fa-magnifying-glass"></i>
-      </div>
-      <ul className="nav-list" style={{ border: 'none', boxShadow: 'none' }}>
-        <li><Link to="/">Home</Link></li>
-        <li><a href="#" className="c-btn" id="c-btn">Contact Us</a></li>
-        <li><a href="#" id="personal1" className="personal1" >Personal Info</a></li>
-        <div id="loader1" className="load"></div>
-        <li><a href="#" className="about1">About Us</a></li>
-        <li className="more-options">
-         <div className="more-options-btn" ><GiHamburgerMenu /></div> 
-        </li>
-      </ul>
-    </div>
+    </>
   );
 };
 

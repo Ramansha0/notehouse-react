@@ -1,13 +1,39 @@
-import React from 'react'
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { FaPhoneAlt, FaTelegramPlane, FaFacebookF } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import '../../App.css'
+import './footer.css'
+import { FaArrowUp } from "react-icons/fa6";
+import { FaUser } from "react-icons/fa";
 const Foot = () => {
+ const location = useLocation();
+useEffect(() => {
+  const scrollTarget = location.state?.scrollTo;
+
+  if (scrollTarget) {
+    const el = document.getElementById(scrollTarget);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Clear scroll state so it doesn't persist
+    window.history.replaceState({}, document.title);
+  }
+}, [location]);
+
+
+
+
+
+
+
+
     return (
         <div>
             <div id="about-section" className="about-section">
-                <header>
-                    <h1>About Us</h1>
+                <header style={{backgroundColor:'#2563EB',}}>
+                    <h1 style={{color:'white '}} >About Us</h1>
                 </header>
                 <section className="hero">
                     <h2>We’re passionate about education.</h2>
@@ -50,10 +76,10 @@ const Foot = () => {
                     </div>
 
                     <div className="bross">
-                        <div><FaPhoneAlt /><p className='contact-items'>+977 9862573214</p></div>
-                        <div><FaTelegramPlane /><p className='contact-items'>Raman Shah</p></div>
-                        <div><FaFacebookF/><p className='contact-items'>Notes House</p></div>
-                        <div><IoMdMail/><p className='contact-items'>ramanshah440@gmail.com</p></div>
+                        <div><FaPhoneAlt style={{marginRight :'7px',color:'#1ba5fa'}} /><p className='contact-items'>+977 9862573214</p></div>
+                        <div><FaTelegramPlane  style={{marginRight :'7px',color:'#1ba5fa'}}/><p className='contact-items'>Raman Shah</p></div>
+                        <div><FaFacebookF style={{marginRight :'7px',color:'#1ba5fa'}}/><p className='contact-items'>Notes House</p></div>
+                        <div><IoMdMail style={{marginRight :'7px',color:'#1ba5fa'}}/><p className='contact-items'>ramanshah440@gmail.com</p></div>
                     </div>
                 </div>
 
@@ -61,20 +87,21 @@ const Foot = () => {
                     <div className="send">
                         <p>Get In Touch</p>
                     </div>
+                <form  action="https://formsubmit.co/ramanshah440@gmail.com" method="POST">
                     <div className="email1">
-                        <i className="fa-solid fa-user"></i>
-                        <input id="email1" type="email" placeholder="Your Email" required />
+                      <FaUser style={{color:'#1ba5fa'}}/>
+                        <input id="email1" type="email" name="Email" placeholder="Your Email" required />
                     </div>
                     <div className="email2">
-                        <i className="fa-solid fa-user"></i>
-                        <input id="nameuser" type="text" placeholder="Full Name" required />
+                        <FaUser style={{color:'#1ba5fa'}}/>
+                        <input id="nameuser" type="text" name="Name" placeholder="Full Name" required />
                     </div>
                     <div className="email">
-                        <textarea id="message1" placeholder="Comment"></textarea>
+                        <textarea name="Message" id="message1" placeholder="Comment"></textarea>
                     </div>
                     <div className="sub" id="submitBtn">
-                        <button className="sb">Submit</button>
-                    </div>
+                        <button className="sb" type='submit'>Submit</button>
+                    </div></form>
                 </div>
             </div>
 
@@ -91,11 +118,11 @@ const Foot = () => {
 
                         <div className="cont">
                             <p className="please" style={{ fontWeight: '700', fontSize: '30px', marginTop: '40px' }}>Quick links</p>
-                            <p>- Home</p>
-                            <p>- About Us</p>
-                            <p>- Contact Us</p>
-                            <p>- Personal Info</p>
-                            <p>- Portfolio</p>
+                                    <a className='h-btn' onClick={() => document.getElementById("navbar")?.scrollIntoView({ behavior: "smooth" })}>- Home</a>
+  <a className='c-btn' onClick={() => document.getElementById("contact-page")?.scrollIntoView({ behavior: "smooth" })}>- Contact Us</a>
+  <a className='perso' id='personal1' onClick={() => window.location.href = "https://ramansha0.github.io/Portfolio/"}>- Personal Info</a>
+  <a className='about1' onClick={() => document.getElementById("about-section")?.scrollIntoView({ behavior: "smooth" })}>- About Us</a>
+
                         </div>
                         <div className="cont">
                             <p className="please" style={{ fontWeight: '700', fontSize: '30px', marginTop: '40px' }}>Contact Info</p>
@@ -120,16 +147,17 @@ const Foot = () => {
                         <i className="fa-brands fa-youtube"></i>
                         <i className="fa-brands fa-telegram"></i>
                         <div className="cin">
-                            <p>Home</p>
-                            <p>About Us</p>
-                            <p>Contact Us</p>
-                            <p>Portfolio</p>
+                            <a className='h-btn' onClick={() => document.getElementById("navbar")?.scrollIntoView({ behavior: "smooth" })}>Home</a>
+  <a className='c-btn' onClick={() => document.getElementById("contact-page")?.scrollIntoView({ behavior: "smooth" })}>Contact Us</a>
+  <a className='perso' id='personal1' onClick={() => window.location.href = "https://ramansha0.github.io/Portfolio/"}>Personal Info</a>
+  <a className='about1' onClick={() => document.getElementById("about-section")?.scrollIntoView({ behavior: "smooth" })}>About Us</a>
+
                         </div>
                     </div>
                 </div>
-                <div className="scroll-up-btn" id="scrollUpBtn"><i className="fa-solid fa-arrow-up"></i></div>
-                <footer className="footer">
-                    <div className="footer-content">
+                <div className="scroll-up-btn" id="scrollUpBtn"><FaArrowUp/></div>
+                <footer style={{height:'0px'}} >
+                    <div id='footer-content' className="footer-content">
                         <p>We are dedicated to providing quality education and resources to help students achieve their goals.</p>
                         <p>&copy; 2024 NotesHouse. All rights reserved.</p>
                     </div>

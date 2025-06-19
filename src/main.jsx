@@ -1,19 +1,28 @@
 // src/main.jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route,Link  } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import App from './App.jsx';
-import Physics from './Physics.jsx';
-
-
+import Physics from './pages/Physics/Physics.jsx';
+import Chemistry from './pages/Chemistry/Chemistry.jsx';
+import Math from './pages/Math/Math.jsx';
+import Computer from'./pages/computer/Computer.jsx'
+import Nepali from './pages/Nepali/Nepali.jsx'
+import English from './pages/English/English.jsx'
 function Layout() {
   return (
     <div>
-    
-      
       <Routes>
-        <Route path="/" element={<App/>} />
+      
+<Route path="*" element={<h1>404 - Page Not Found</h1>} />
+
+        <Route path="/" element={<App />} />
         <Route path="/physics" element={<Physics />} />
+        <Route path="/chemistry" element={<Chemistry />} />
+               <Route path="/math" element={<Math/>} />
+                        <Route path="/computer" element={<Computer/>} />
+                         <Route path="/nepali" element={<Nepali/>} />
+                                     <Route path="/english" element={<English/>} />
       </Routes>
     </div>
   );
@@ -21,8 +30,8 @@ function Layout() {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Layout />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );

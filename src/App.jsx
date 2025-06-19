@@ -9,14 +9,13 @@ const App = () => {
   useEffect(() => {
     initNotehouseScripts();
   }, []);
-
+ 
   return (
     <div>
-      <Navbar />
-      <Body />
-      <Foot />
+      <Navbar/>
+      <Body/>
+      <Foot/>
     </div>
   );
-};
-
+}
 export default App;
