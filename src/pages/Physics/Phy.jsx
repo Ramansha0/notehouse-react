@@ -25,6 +25,17 @@ const Phy = () => {
     setPdf("https://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf"); // another sample PDF
   };
 
+   const change3 = () => {
+    setPdf("https://www.mozilla.org/media/MPL/2.0/index.815ca599c9df.pdf"); // another sample PDF
+  };
+ const change4 = () => {
+    setPdf("https://file-examples.com/wp-content/uploads/2017/10/file-sample_150kB.pdf"); // another sample PDF
+  };
+ const change5 = () => {
+
+    setPdf(" https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf"); // another sample PDF
+  };
+
 
    const location = useLocation();
 
@@ -151,19 +162,19 @@ useEffect(() => {
           <div className="divider"></div>
 
           <div className="three1">
-            <div className="boxes2 box-style1">
+            <div className="boxes2 box-style1" onClick={()=>{change3(); document.getElementById("nextpage1")?.scrollIntoView({behavior:"smooth"})}}>
               <p className="box-title">NEB CLASS - XI</p>
               <p className="box-subtitle">Physics Question Papers</p>
               <p className="box-desc">Here you can find most repeated questions in the exam. First Terminal, Second Terminal...</p>
               <p className="box-batch">Batch - 2081</p>
             </div>
-            <div className="boxes2 box-style2">
+            <div className="boxes2 box-style2" onClick={()=>{change4(); document.getElementById("nextpage1")?.scrollIntoView({behavior:"smooth"})}}>
               <p className="box-title">NEB CLASS - XI</p>
               <p className="box-subtitle">Current News NEB</p>
               <p className="box-desc">Here you can find most repeated questions in the exam. First Terminal, Second Terminal...</p>
               <p className="box-batch">Batch - 2081</p>
             </div>
-            <div className="boxes2 box-style3">
+            <div className="boxes2 box-style3" onClick={()=>{change5(); document.getElementById("nextpage1")?.scrollIntoView({behavior:"smooth"})}}>
               <p className="box-title">NEB CLASS - XI</p>
               <p className="box-subtitle">Practice Questions</p>
               <p className="box-desc">Here you can find most repeated questions in the exam. First Terminal, Second Terminal...</p>
