@@ -20,6 +20,18 @@ const Nep = () => {
     setPdf("https://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf");
   }
 
+   const change3 = () => {
+    setPdf("https://www.mozilla.org/media/MPL/2.0/index.815ca599c9df.pdf"); // another sample PDF
+  };
+ const change4 = () => {
+    setPdf("https://file-examples.com/wp-content/uploads/2017/10/file-sample_150kB.pdf"); // another sample PDF
+  };
+ const change5 = () => {
+
+    setPdf(" https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf"); // another sample PDF
+  };
+
+
   const location = useLocation();
   useEffect(() => {
     const scrollTarget = location.state?.scrollto;
@@ -121,19 +133,19 @@ const Nep = () => {
           <iframe className="area" src={pdf} title="Nepali Notes"></iframe>
           <div className="divider"></div>
           <div className="three1">
-            <div className="boxes2 box-style1">
+            <div className="boxes2 box-style1" onClick={()=>{change3(); document.getElementById("nextpage1")?.scrollIntoView({behavior:"smooth"})}}>
               <p className="box-title">NEB कक्षा - ११</p>
               <p className="box-subtitle">नेपाली प्रश्नपत्र</p>
               <p className="box-desc">यहाँ अघिल्ला परीक्षाका प्रमुख प्रश्नहरू समेटिएका छन्।</p>
               <p className="box-batch">ब्याच - २०८१</p>
             </div>
-            <div className="boxes2 box-style2">
+            <div className="boxes2 box-style2" onClick={()=>{change4(); document.getElementById("nextpage1")?.scrollIntoView({behavior:"smooth"})}}>
               <p className="box-title">NEB कक्षा - ११</p>
               <p className="box-subtitle">NEB हालको सूचना</p>
               <p className="box-desc">नेपाली विषयसँग सम्बन्धित ताजा सूचना तथा अपडेटहरू।</p>
               <p className="box-batch">ब्याच - २०८१</p>
             </div>
-            <div className="boxes2 box-style3">
+            <div className="boxes2 box-style3" onClick={()=>{change5(); document.getElementById("nextpage1")?.scrollIntoView({behavior:"smooth"})}}>
               <p className="box-title">NEB कक्षा - ११</p>
               <p className="box-subtitle">अभ्यास प्रश्न</p>
               <p className="box-desc">अघिल्ला वर्षका र नमुना प्रश्नपत्रहरू अभ्यासका लागि।</p>
