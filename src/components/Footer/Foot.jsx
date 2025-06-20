@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { FaPhoneAlt, FaTelegramPlane, FaFacebookF } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import '../../App.css'
-import './footer.css'
+
 import { FaArrowUp } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
 const Foot = () => {
