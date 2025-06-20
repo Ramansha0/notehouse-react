@@ -1,7 +1,7 @@
 // src/main.jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter, Routes, Route, Link } from 'react-router-dom';
+import {  Routes, Route, BrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
 import Physics from './pages/Physics/Physics.jsx';
 import Chemistry from './pages/Chemistry/Chemistry.jsx';
@@ -31,8 +31,8 @@ function Layout() {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <Layout />
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>
 );
