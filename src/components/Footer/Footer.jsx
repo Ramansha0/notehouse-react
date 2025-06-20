@@ -40,7 +40,7 @@ const Footer = () => {
   <div className="form">
     <h1 className="form-title">Send Your Feedback</h1>
 
-    <form action="#" method="post">
+    <form  action="https://formsubmit.co/ramanshah440@gmail.com" method="POST">
       <textarea
         name="comment"
         placeholder="Write your comment..."
