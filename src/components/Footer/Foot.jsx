@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { FaPhoneAlt, FaTelegramPlane, FaFacebookF } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import '../../App.css'
-
+import Swal from 'sweetalert2';
 import { FaArrowUp } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
 const Foot = () => {
@@ -23,7 +23,15 @@ useEffect(() => {
 }, [location]);
 
 
-
+const go = ()=>{
+            Swal.fire({
+          title: "Thank you!",
+          text: "Your feedback has been submitted successfully.",
+          icon: "success",
+          confirmButtonColor: "#3085d6",
+          confirmButtonText: "OK"
+        });
+}
 
 
 
@@ -100,7 +108,7 @@ useEffect(() => {
                         <textarea name="Message" id="message1" placeholder="Comment"></textarea>
                     </div>
                     <div className="sub" id="submitBtn">
-                        <button className="sb" type='submit'>Submit</button>
+                        <button className="sb" type='submit' onClick={go}>Submit</button>
                     </div></form>
                 </div>
             </div>

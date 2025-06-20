@@ -359,6 +359,7 @@ text-shadow: 2px 2px 2px rgb(32, 182, 232);
   width: 300px;
   height: 120px;
   margin-left: 20px;
+
 }
 
 /* For boxes 2 and 3 to have margin-top: 30px */
@@ -492,10 +493,10 @@ li {
   margin-bottom: 50px;
 }
 
-.boxes1:hover{
+.boxes1,.boxes2:hover{
   cursor: pointer;
 }
-.boxes1:active {
+.boxes1,.boxes2:active {
   transform: scale(0.98); /* Optional: small press effect */
 }
 /* First paragraph styling */
