@@ -46,7 +46,7 @@ const Navbar = () => {
       <div className="loader10" id="loader10"></div>
       <div className="navbar" id="navbar">
         <div className="logo">
-          <img id="img1" className="img1" src="src/assets/logo.png" alt="logo" />
+          <img id="img1" className="img1" src="https://raw.githubusercontent.com/Ramansha0/notehouse-react/refs/heads/main/src/assets/logo.png" alt="logo" />
         </div>
 
         <div id="back" className="back">
