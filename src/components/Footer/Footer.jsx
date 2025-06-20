@@ -1,8 +1,23 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 import '../../utils/subject.css';
 import { FaArrowUp } from "react-icons/fa6";
 const Footer = () => {
+
+  const [empty, setEmpty] = useState('');
+
+  const call = () => {
+        Swal.fire({
+      title: "Thank you!",
+      text: "Your feedback has been submitted successfully.",
+      icon: "success",
+      confirmButtonColor: "#3085d6",
+      confirmButtonText: "OK"
+    });
+    setEmpty(''); // This will clear the textarea
+  };
+
+
   return (
     <div className="contu">
     <footer>
@@ -40,12 +55,19 @@ const Footer = () => {
   <div className="form">
     <h1 className="form-title">Send Your Feedback</h1>
 
-    <form  action="https://formsubmit.co/ramanshah440@gmail.com" method="POST">
+   <form
+      action="https://formsubmit.co/ramanshah440@gmail.com"
+      method="POST"
+      onSubmit={call} // Trigger call on submit
+    >
       <textarea
         name="comment"
         placeholder="Write your comment..."
         rows="4"
+        value={empty}
+        onChange={(e) => setEmpty(e.target.value)} // Required for controlled input
         className="form-textarea"
+        required
       ></textarea>
       <br />
       <button type="submit" className="form-button">Submit</button>
