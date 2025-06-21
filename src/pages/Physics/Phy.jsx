@@ -8,6 +8,8 @@ const Phy = () => {
   const [showup, setShowup] = useState(false);
   const [pdf, setPdf] = useState(true);
 
+
+
 const close =()=>{
   alert("clciked")
 }
@@ -41,8 +43,15 @@ const close =()=>{
   };
 
 
-   const location = useLocation();
+ const location = useLocation();
+  const [showElement, setShowElement] = useState(false);
 
+  useEffect(() => {
+    const scrolldown1 = location.state?.scrolldown;
+    if (scrolldown1) {
+      setShowElement(true);
+    }
+  }, [location]);
 useEffect(() => {
   const scrollTarget = location.state?.scrollto;
 
@@ -60,6 +69,7 @@ useEffect(() => {
 
   return (
     <div>
+      <button className='topbtn'onClick={()=> document.getElementById("books")?.scrollIntoView({behavior :"smooth"})} style={{ display: showElement ? 'block' : 'none' }}>View Books !</button>
       <div className="subject">
         <img
           className="glass"

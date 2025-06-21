@@ -1,7 +1,7 @@
 // src/main.jsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import {  Routes, Route, BrowserRouter } from 'react-router-dom';
+import {  Routes, Route, BrowserRouter, useLocation } from 'react-router-dom';
 import App from './App.jsx';
 import Physics from './pages/Physics/Physics.jsx';
 import Chemistry from './pages/Chemistry/Chemistry.jsx';
@@ -10,6 +10,13 @@ import Computer from'./pages/Computer/Computer.jsx'
 import Nepali from './pages/Nepali/Nepali.jsx'
 import English from './pages/English/English.jsx'
 function Layout() {
+
+    const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // scroll to top on route change
+  }, [pathname]);
+
   return (
     <div>
 <Routes>

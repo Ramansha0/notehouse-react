@@ -634,6 +634,16 @@ li {
   }
 }
 
+
+
+@media (min-width: 768px) {
+  .topbtn {
+    margin-left: 10vw !important;
+    left: auto;
+    right: auto;
+    transform: none;
+  }
+}
 @media screen and (max-width: 490px){
   .topic{
     font-size:2.5em;
@@ -641,6 +651,12 @@ li {
   
 
   }
+    .topbtn {
+    margin-left: 20vw !important;
+
+position: relative !important;
+  }
+
   .back{
     margin-left:2.8rem !important
   }
@@ -1205,4 +1221,14 @@ width:90%
 
 .bookpdf.open{
   display:none;
+}
+
+.topbtn {
+  background-color: lightgreen;
+  z-index: 888;
+  position: absolute;
+  margin-top: 4vh;
+  font-size: 25px;
+  font-weight: 800;
+  width: 240px;
 }
