@@ -77,7 +77,17 @@ const Navbar = () => {
             <li><a className="perso" id="personal1"> <FaUserAlt/> Personal Info</a></li>
             <li><Link to="/" state={{ scrollTo: "about-section" }} style={{ textDecoration: "none", color: "white" }} className="about1"><div className="cliked"><TfiSharethis /> About Us</div></Link></li>
           </ul>
-          <li><Link to="/physics" onClick={close} state={{ scrollto: "nextpage1" }} style={{ textDecoration: "none", color: "white" }}>            <div className="cliked">📝 Model Questions</div></Link></li>
+        <li>
+  <Link
+    to="/physics"
+    onClick={close}
+    state={{ scrollto: "nextpage1", animateBox: true }}
+    style={{ textDecoration: "none", color: "white" }}
+  >
+    <div className="cliked">📝 Model Questions</div>
+  </Link>
+</li>
+
           <li><a id="bt0" onClick={() => { close(); document.getElementById("container-page")?.scrollIntoView({ behavior: "smooth" }) }} style={{ textDecoration: "none", color: "white" }}>            <div className="cliked">📂 Notes</div></a></li>
         </div>
       </div>

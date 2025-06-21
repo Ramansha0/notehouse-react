@@ -250,7 +250,7 @@ li {
     width:100px;
     height:30px;
     text-align: center;
-    background-color: rgb(44, 215, 234);
+    background-color: rgb(10, 105, 168);
     font-size:15px;
     font-weight:500;
     border-radius:7px;
@@ -330,6 +330,28 @@ text-shadow: 2px 2px 2px rgb(32, 182, 232);
     margin-top:-30px;
     margin-bottom:-10px
 }
+#boxes2.open {
+  animation: leftMove 1s forwards; /* Increased from 0.3s to 1s */
+  background-color: lightblue;
+}
+
+@keyframes leftMove {
+  0% {
+    transform: translateX(-100%);
+    background-color:lightbluen;
+  }
+  100% {
+    transform: translateX(0);
+    background-color: lightblue;
+  }
+}
+
+#boxes2.open {
+  animation: leftMove 1s ease-in-out forwards;
+  background-color: lightblue;
+}
+
+
 .boxes3{
     width:390px;
     height:100px;
@@ -473,12 +495,13 @@ li {
     width:100px;
     height:30px;
     text-align: center;
-    background-color: rgb(44, 215, 234);
-    font-size:15px;
-    font-weight:500;
+  background-color: #2588cb;
+    font-size:18px;
+    font-weight:700;
     border-radius:7px;
     margin-top:10px;
-    margin-left:20px
+    margin-left:20px;
+    padding-top: 8px;
 }
 
 .area{
@@ -1069,4 +1092,117 @@ margin-top: -9px;
 
 
 
+}
+
+
+
+
+/*books making
+/* ChemistryBook.css */
+
+
+.books{
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+   /* Smooth bluish gradient */
+   padding: 0 10px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 50px auto;
+  background: linear-gradient(135deg, #a3cef1 0%, #e0f7fa 60%, #ffffff 100%);
+ 
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.01);
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+p.description {
+  text-align: center;
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.viewer-btn {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: #ff9900;
+  color: #fff;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffaa33;
+}
+
+#book-pdf {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  height: auto;
+width:90%
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  #book-pdf {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  p.description {
+    font-size: 14px;
+  }
+
+  #book-pdf {
+    height: 300px;
+  }
+}
+
+.bookpdf.open{
+  display:none;
 }

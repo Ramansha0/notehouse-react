@@ -8,6 +8,10 @@ const Phy = () => {
   const [showup, setShowup] = useState(false);
   const [pdf, setPdf] = useState(true);
 
+const close =()=>{
+  alert("clciked")
+}
+
   const viewport = () => {
     setShowup(!showup);
   }
@@ -46,6 +50,7 @@ useEffect(() => {
     const el = document.getElementById(scrollTarget);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
+
     }
 
     // Clear scroll state so it doesn't persist
@@ -154,7 +159,7 @@ useEffect(() => {
         <h1 className='hlo' style={{ marginLeft: '-400px' }}>PDF Viewer</h1>
         <div className="btnandtitle">
           <p>You Can see your notes below:</p>
-          <button className="click" onClick={()=>document.getElementById("page")?.scrollIntoView({ behavior: "smooth" })}>Click Here!</button>
+          <button className="click" onClick={()=>document.getElementById("page")?.scrollIntoView({ behavior: "smooth" })}>Click !</button>
         </div>
         <div className="ques" id='ques'>
           <iframe className="area" src={pdf} title="Physics Notes"></iframe>
@@ -162,7 +167,7 @@ useEffect(() => {
           <div className="divider"></div>
 
           <div className="three1">
-            <div className="boxes2 box-style1" onClick={()=>{change3(); document.getElementById("nextpage1")?.scrollIntoView({behavior:"smooth"})}}>
+            <div id="boxes2"  className={`boxes2 box-style1 ${location.state?.animateBox ? "open" : ""}`} onClick={()=>{change3(); document.getElementById("nextpage1")?.scrollIntoView({behavior:"smooth"})}}>
               <p className="box-title">NEB CLASS - XI</p>
               <p className="box-subtitle">Physics Question Papers</p>
               <p className="box-desc">Here you can find most repeated questions in the exam. First Terminal, Second Terminal...</p>

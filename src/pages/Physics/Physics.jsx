@@ -5,7 +5,8 @@ import Phy from './Phy.jsx';
 import { initNotehouseScripts } from '../../utils/notehouse';
 import Navbar from '../../components/Navbar/Navbar.jsx';
 import '../../utils/subject.css'
-import Footer from '../../components/Footer/Footer.jsx'
+import Footer from '../../components/Footer/Footer.jsx';
+import Books from '../../components/Body1/Books.jsx';
 const Physics = () => {
 
 useEffect(() => {
@@ -21,6 +22,7 @@ useEffect(() => {
       <Navbar />
        <Phy />
     <Secondl/>
+    <Books/>
     <Footer/>
 
     </div>

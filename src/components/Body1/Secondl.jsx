@@ -19,7 +19,7 @@ const Secondl = () => {
           <div className="left">
             <div
               style={{ width: '450px', height: '135px', marginTop: '30px' }}
-              className="boxes3"
+             id="boxes3" className="boxes3"
             >
               <p className='paru1'
                 style={{
