@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import '../../utils/subject.css';
 
-const Books = () => {
+const Books = (props) => {
   const [showPdf, setShowPdf] = useState(true);
 
   const shuter =()=>{
@@ -9,12 +9,9 @@ const Books = () => {
   }
   return (
     <div className="books">
-    <div className="container">
-      <h1>📘 Class 11 Chemistry Full Book</h1>
-      <p className="description">
-        Read the complete NEB Chemistry book online. Click the button below to
-        start viewing.
-      </p>
+     <div className="container">
+        <h1>{props.title}</h1>
+        <p className="description">{props.description}</p>
 
       <div className="viewer-btn">
         <button onClick={shuter}>

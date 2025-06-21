@@ -6,6 +6,7 @@ import { initNotehouseScripts } from '../../utils/notehouse';
 import Navbar from '../../components/Navbar/Navbar.jsx';
 import '../../utils/subject.css'
 import Footer from '../../components/Footer/Footer.jsx'
+import Books from '../../components/Body1/Books.jsx';
 const Chemistry = () => {
 
 useEffect(() => {
@@ -21,6 +22,11 @@ useEffect(() => {
       <Navbar />
        <Chem/>
     <Secondl/>
+    <Books
+  title="📘 Class 11 Chemistry Full Book"
+  description="Read the complete NEB Chemistry book online. Click the button below to start viewing."
+
+/>
     <Footer/>
 
     </div>

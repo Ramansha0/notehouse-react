@@ -22,7 +22,11 @@ useEffect(() => {
       <Navbar />
        <Phy />
     <Secondl/>
-    <Books/>
+<Books
+  title="📘 Class 11 Physics Full Book"
+  description="Read the complete NEB Physics book online. Click the button below to start viewing."
+
+/>
     <Footer/>
 
     </div>
