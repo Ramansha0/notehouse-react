@@ -55,7 +55,7 @@ const Body = () => {
                   src="https://previews.123rf.com/images/captainvector/captainvector1703/captainvector170312672/74784719-physics-subject-icon.jpg"
                   alt="Physics"
                 />
-                <Link to="/physics" id="classy2" className="btn btn-secondary" state={{disappear: "nextpage1"}}>Notes</Link>
+                <Link to="/physics" id="classy2" className="btn btn-secondary">Notes</Link>
               </div>
 
               <div className="course1">

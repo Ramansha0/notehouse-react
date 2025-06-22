@@ -1,45 +1,46 @@
-import React, { useState} from "react";
+import React, { useState, useEffect } from "react";
 import '../../utils/subject.css';
 import { useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+
 const Books = (props) => {
   const [showPdf, setShowPdf] = useState(true);
+  const [showBooks, setShowBooks] = useState(false); // default: hidden
 
-   const [showElem, setShowElem] = useState(false);
-  const shuter =()=>{
-    setShowPdf(!showPdf);
-  }
-      
-     const location =useLocation();
-
+  const location = useLocation();
 
   useEffect(() => {
-    const scroll = location.state?.dissapear;
-    if (scroll ) {
-
-            setShowElem(true);
+    const shouldShowBooks = location.state?.scrolldown;
+    if (shouldShowBooks) {
+      setShowBooks(true); // ✅ show when state is passed
     }
   }, [location]);
+
+  const shuter = () => {
+    setShowPdf(!showPdf);
+  };
+
   return (
-    <div  style={{ display: showElem ? 'block' : 'none' }} id="books" className="books">
-     <div className="container1">
-        <h1>{props.title}</h1>
-        <p className="description">{props.description}</p>
+    showBooks && (
+      <div className="books" id="books">
+        <div className="container1">
+          <h1>{props.title}</h1>
+          <p className="description">{props.description}</p>
 
-      <div className="viewer-btn">
-        <button onClick={shuter}>
-          <i className="fas fa-book-open"></i> View Book
-        </button>
+          <div className="viewer-btn">
+            <button onClick={shuter}>
+              <i className="fas fa-book-open"></i> View Book
+            </button>
+          </div>
+
+          <iframe
+            className={`bookpdf ${showPdf ? "open" : ""}`}
+            id="book-pdf"
+            src="Class-11-Chemistry-Book.pdf"
+            title="Class 11 Chemistry Book"
+          ></iframe>
+        </div>
       </div>
-
-
-        <iframe className={`bookpdf ${showPdf && "open"}`}
-          id="book-pdf"
-          src="Class-11-Chemistry-Book.pdf"
-          title="Class 11 Chemistry Book"
-        ></iframe>
-  
-    </div></div>
+    )
   );
 };
 

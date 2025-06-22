@@ -1232,3 +1232,6 @@ width:90%
   font-weight: 800;
   width: 240px;
 }
+.books.open{
+  display:none;
+}
