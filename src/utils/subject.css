@@ -639,9 +639,7 @@ li {
 @media (min-width: 768px) {
   .topbtn {
     margin-left: 10vw !important;
-    left: auto;
-    right: auto;
-    transform: none;
+ 
   }
 }
 @media screen and (max-width: 490px){
@@ -893,6 +891,12 @@ margin-top: -9px;
 }
 .con.open{
   display: block !important;
+}
+.topbtn{
+    margin-left: 30vw !important;
+margin-bottom: 4vh;
+position: relative !important;
+  
 }
 
 }

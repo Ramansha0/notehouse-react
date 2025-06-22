@@ -39,8 +39,21 @@ const Chem = () => {
     }
   }, [location]);
 
+
+
+
+    const [showElement, setShowElement] = useState(false);
+  
+    useEffect(() => {
+      const scrolldown1 = location.state?.scrolldown;
+      if (scrolldown1) {
+        setShowElement(true);
+      }
+    }, [location]);
+
   return (
     <div>
+          <button className='topbtn'onClick={()=> document.getElementById("books")?.scrollIntoView({behavior :"smooth"})} style={{ display: showElement ? 'block' : 'none' }}>View Books !</button>
       <div className="subject">
         <img className="glass" src="https://thumbs.dreamstime.com/b/colorful-chemistry-lab-flasks-test-tubes-experiments-science-research-education-liquids-analy-illustration-various-filled-358839813.jpg" alt="Chemistry" />
         <p id='topic' className="topic">Chemistry</p>

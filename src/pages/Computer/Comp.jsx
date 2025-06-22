@@ -40,11 +40,21 @@ const Comp = () => {
     }
   }, [location]);
 
+
+    const [showElement, setShowElement] = useState(false);
+
+  useEffect(() => {
+    const scrolldown1 = location.state?.scrolldown;
+    if (scrolldown1) {
+      setShowElement(true);
+    }
+  }, [location]);
   return (
     <div>
+       <button className='topbtn'onClick={()=> document.getElementById("books")?.scrollIntoView({behavior :"smooth"})} style={{ display: showElement ? 'block' : 'none' }}>View Books !</button>
       <div className="subject">
         <img className="glass" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIf1UsthSmB9pgA9nA9TOBHuGEi5SBcciJpQ&s" alt="Computer" />
-        <p id='topic' className="topic">Computer Science</p>
+        <p id='topic' className="topic">Computer </p>
       </div>
 
       <div id='page' className="page">
