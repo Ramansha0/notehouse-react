@@ -9,7 +9,7 @@ import Math from './pages/Math/Math.jsx';
 import Computer from'./pages/Computer/Computer.jsx'
 import Nepali from './pages/Nepali/Nepali.jsx'
 import English from './pages/English/English.jsx'
-import Mainbook from './pages/Physics/Physics-book.jsx';
+import Physicsbook from './pages/Physics/Physicsbook.jsx';
 function Layout() {
 
     const { pathname } = useLocation();
@@ -30,7 +30,7 @@ function Layout() {
   <Route path="/english" element={<English />} />
   
 {/*for the book section*/}
-<Route path="/physics-book" element={<Mainbook/>}/>
+<Route path="/physics-book" element={<Physicsbook/>}/>
 
 
 

@@ -1,16 +1,22 @@
 
-
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5faff;
+  color: #222;
+}
 
 
 header {
   background: #e6f2ff;
-  padding: 40px 20px;
+  padding: 40px 20px ;
   text-align: center;
+  width:96%
 }
 
 header h2 {
   font-size: 32px;
   color: #003366;
+
 }
 
 main {
@@ -54,46 +60,44 @@ button:hover {
 button:active {
   transform: scale(0.98);
 }
-
 .pdf-container {
   margin-top: 30px;
   width: 100%;
   height: 600px;
-  display: none;
-}
-
-.pdf-container.open {
   display: block;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 iframe {
   width: 100%;
   height: 100%;
-  border: none;
   border-radius: 8px;
+  border: 2px solid #004080;
 }
 
 
 
+.pdf-container.open {
+  display: block;
+}
+
+
 
 @media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-    margin-top: 10px;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
+header{
+  width:91%;
+  height:50px;
+}
   header h2 {
     font-size: 24px;
   }
-
-  button {
-    width: 100%;
-  }
+footer{
+margin-bottom: 200px;
+}
+.pdf-container{
+  height: 400px;;
+  border: 2px solid black;
+  margin-bottom: -40px;
+}
 }

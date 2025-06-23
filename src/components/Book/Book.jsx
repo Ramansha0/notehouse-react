@@ -4,12 +4,10 @@ import '../../utils/subject.css';
 import '../../utils/Book.css';
 
 const Book = ({ title, description, pdfName }) => {
-  const [showPDF, setShowPDF] = useState(false);
   const [shown, setShown] = useState(false);
 
   const handleShowPDF = () => {
-    setShown(!shown);
-    setShowPDF(true);
+    setShown(true); // Only show PDF, not toggle
     setTimeout(() => {
       const viewer = document.getElementById('pdfViewer');
       if (viewer) {
@@ -20,11 +18,11 @@ const Book = ({ title, description, pdfName }) => {
 
   return (
     <div>
-      <header>
-        <h2>{title} Set Book Viewer</h2>
-      </header>
-
       <main>
+        <header>
+          <h2>{title} Set Book Viewer</h2>
+        </header>
+
         <h3>About this Book</h3>
         <p>{description}</p>
 
@@ -34,9 +32,11 @@ const Book = ({ title, description, pdfName }) => {
 
         <button onClick={handleShowPDF}>📖 Open {title} Book</button>
 
-        <div className={`pdf-container${shown ? " open" : ""}`} id="pdfViewer">
-          <iframe src={pdfName} title={`${title} Book`}></iframe>
-        </div>
+        {shown && (
+          <div className="pdf-container" id="pdfViewer">
+            <iframe src={pdfName} title={`${title} Book`} />
+          </div>
+        )}
       </main>
     </div>
   );
