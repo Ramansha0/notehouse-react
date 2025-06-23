@@ -586,7 +586,7 @@ margin-left: -1rem !important;
 .para-text {
   color: white;
   text-align: center;
-  padding-top: 27px;
+  padding-top: px;
   padding-left: 30px;
   width: 500px;
   font-size: 1.6vw;
@@ -649,7 +649,7 @@ margin-left: -1rem !important;
 
   .boxes1 p:first-of-type {
     font-size: 1.1rem; /* smaller heading */
-    margin-left: -2.5rem !important;
+    margin-left: -2.rem !important;
   }
 
   .boxes1 p:nth-of-type(2),
@@ -768,7 +768,7 @@ margin-left:40px
 
   .box-title {
     font-size: 20px;
-    margin-left: -160px !important;
+    margin-left: -130px !important;
     margin-top: -10px;
   }
 
@@ -914,7 +914,12 @@ margin-top: -18px;
 }
 
 @media (min-width: 490px) and (max-width: 650px) {
-
+.boxes2{
+height: 140px !important;
+}
+.contain{
+  margin-top: 400px !important;
+}
 .side1{
         margin-left:50px;
 }
@@ -937,9 +942,34 @@ position: relative !important;
   
 }
 
+  .boxes1 p:first-of-type {
+    font-size: 1.3rem !important; /* smaller heading */
+    margin-left: -rem !important;
+  }
+
+  .boxes1 p:nth-of-type(2),
+  .boxes1 p:last-of-type {
+    padding-left: 2rem;
+    padding-right: 1rem;
+    font-size: 0.9rem !important;
+    width: 90% !important;
+    margin-top: -15px !important;
+    margin-left: 10px;
+  }
+
+  .boxes1 p:last-of-type {
+    font-size: 0.625rem;
+    margin-top:9px !important
+  }
+
 }
 @media (min-width: 650px) and (max-width: 769px) {
-
+.boxes2{
+height: 140px !important;
+}
+.contain{
+  margin-top: 400px !important;
+}
   .side1{
         margin-left:50px;
 }
@@ -961,6 +991,7 @@ margin-bottom: 4vh;
 position: relative !important;
   
 }
+
   .box-title {
     font-size: 28px !important;
   
@@ -1196,6 +1227,7 @@ margin-top: -17px;
     font-size: 3.5vw;
     margin-left: 0;
     padding-left: 10px;
+
   }
 
   .form-title {
