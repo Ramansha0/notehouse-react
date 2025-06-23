@@ -437,11 +437,7 @@ text-shadow: 2px 2px 2px rgb(32, 182, 232);
 .page{
     display: flex;
 }
-.Name{
-    margin-left:300px;
-   margin-top:-30px;
-   text-shadow: 2px 2px rgb(113, 189, 255)
-}
+
 .sides{
     display:flex;
     margin-left :100px;
@@ -701,7 +697,7 @@ position: relative !important;
 margin-left:40px
 }
 .Name{
-    margin-left:6.5rem
+    margin-left:7.2rem !important
 }
 .side1{
         margin-left:-80px;
