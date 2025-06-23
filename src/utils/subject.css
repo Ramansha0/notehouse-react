@@ -320,7 +320,8 @@ text-shadow: 2px 2px 2px rgb(32, 182, 232);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     margin-left:30px;
     margin-top:-30px;
-    margin-bottom:-10px
+    margin-bottom:-10px;
+
 }
 .boxes2{
     width:390px;
@@ -358,9 +359,20 @@ text-shadow: 2px 2px 2px rgb(32, 182, 232);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     margin-left:30px;
     margin-top:-30px;
-    margin-bottom:-10px
+    margin-bottom:-10px;
+  
 }
 
+.paru1{
+      font-weight: 700 !important;
+}
+.paru2{
+        font-weight: 600 !important;
+          margin-top: -25px !important;
+}
+.paru4{
+  margin-top: -10px !important;
+}
 .ques {
   display: flex;
 }
@@ -392,18 +404,19 @@ text-shadow: 2px 2px 2px rgb(32, 182, 232);
 
 .box-title {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 750;
   text-align: center;
   padding-top: 10px;
-  margin-left: -100px;
+  margin-left: -110px;
 }
 
 .box-subtitle {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   padding-left: 22px;
   padding-right: 20px;
   margin-top: -15px;
+
 }
 
 .box-desc {
@@ -411,12 +424,13 @@ text-shadow: 2px 2px 2px rgb(32, 182, 232);
   margin-top: -10px;
   padding-left: 24px;
   padding-right: 20px;
+      font-weight: 500;
 }
 
 .box-batch {
   font-size: 9px;
   padding-left: 24px;
-  margin-top: -4px;
+  margin-top: -7px;
 }
 
 
@@ -514,6 +528,7 @@ li {
   padding: rem;
   box-sizing: border-box;
   margin-bottom: 50px;
+  
 }
 .boxes1{
   -webkit-tap-highlight-color: transparent; /* For mobile Chrome/Safari */
@@ -530,9 +545,11 @@ li {
 .boxes1 p:first-of-type {
   margin-left: 0vw;
   font-size: 1.25rem; /* ~20px */
-  font-weight: 600;
+  font-weight: 750;
   text-align: center;
   padding-top: 0.5rem;
+margin-left: -1rem !important;
+
 }
 
 /* Second paragraph styling */
@@ -540,7 +557,8 @@ li {
   font-size: 0.875rem; /* ~14px */
   padding-left: 2rem;
   padding-right: 1.25rem;
-  margin-top: -0.9rem;
+  margin-top: -1.2rem;
+    font-weight: 500;
 }
 
 /* Third paragraph styling */
@@ -548,6 +566,7 @@ li {
   font-size: 0.5625rem; /* ~9px */
   padding-left: 2rem;
   margin-top: -0.25rem;
+      font-weight: 490;
 }
 
 .lastpage {
@@ -629,15 +648,17 @@ li {
 }
 
   .boxes1 p:first-of-type {
-    font-size: 1rem; /* smaller heading */
-    margin-left: -18px;
+    font-size: 1.1rem; /* smaller heading */
+    margin-left: -2.5rem !important;
   }
 
   .boxes1 p:nth-of-type(2),
   .boxes1 p:last-of-type {
     padding-left: 1rem;
     padding-right: 1rem;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
+    width: 80%;
+    margin-top: -10px;
   }
 
   .boxes1 p:last-of-type {
@@ -746,20 +767,20 @@ margin-left:40px
   }
 
   .box-title {
-    font-size: 18px;
-    margin-left: -130px !important;
+    font-size: 20px;
+    margin-left: -160px !important;
     margin-top: -10px;
   }
 
   .box-subtitle {
-    font-size: 15px;
-margin-top: -9px;
+    font-size: 16px;
+margin-top: -18px;
    
   }
 
   .box-desc {
     font-size: 12px;
-    margin-top: -10px;
+    margin-top: -12px;
  
   }
 
@@ -793,17 +814,23 @@ margin-top: -9px;
     flex-direction: column;
     height:auto;
   }
+
+  .boxes3{
+    height: 150px !important;
+  }
   
 .paru1{
  
-    font-size: 20px !important;
+    font-size: 23px !important;
 }
 .paru2{
-    font-size: 15px !important;
-    margin-top:-16px !important
+    font-size: 17px !important;
+    margin-top:-19px !important;
+    font-weight: 700 !important;
 }
 .paru3{
-    margin-top: -9px !important;
+    margin-top: -14px !important;
+       font-weight: 600 !important;
 }
 .paru4{
     margin-top:-9px !important
@@ -886,7 +913,7 @@ margin-top: -9px;
 }
 }
 
-@media (min-width: 490px) and (max-width: 769px) {
+@media (min-width: 490px) and (max-width: 650px) {
 
 .side1{
         margin-left:50px;
@@ -911,6 +938,78 @@ position: relative !important;
 }
 
 }
+@media (min-width: 650px) and (max-width: 769px) {
+
+  .side1{
+        margin-left:50px;
+}
+.side2{
+        margin-left:150px !important;
+}
+.Name{
+    margin-left:13rem
+}
+.con{
+  display:none !important;
+}
+.con.open{
+  display: block !important;
+}
+.topbtn{
+    margin-left: 30vw !important;
+margin-bottom: 4vh;
+position: relative !important;
+  
+}
+  .box-title {
+    font-size: 28px !important;
+  
+    margin-top: -10px;
+  }
+
+  .box-subtitle {
+    font-size: 18px !important;
+margin-top: -27px !important;
+margin-left:35px;
+   
+  }
+
+  .box-desc {
+    font-size: 17px;
+    margin-top: -17px !important;
+    margin-left:32px;
+ 
+  }
+
+  .box-batch {
+    font-size: 11px;
+        margin-left:32px;
+  }
+  
+.boxes1{
+    width:80%;
+margin-left:70px
+}
+  .boxes1 p:first-of-type {
+    font-size: 1.5rem !important; /* smaller heading */
+    margin-left: -rem !important;
+  }
+
+  .boxes1 p:nth-of-type(2),
+  .boxes1 p:last-of-type {
+    padding-left: 2rem;
+    padding-right: 1rem;
+    font-size: 1rem !important;
+    width: 80%;
+    margin-top: -15px !important;
+    margin-left: 40px;
+  }
+
+  .boxes1 p:last-of-type {
+    font-size: 0.625rem;
+    margin-top:8px
+  }
+}
 
 
 @media (min-width: 490px) and (max-width: 768px) {
@@ -922,8 +1021,26 @@ position: relative !important;
 }
 .boxes1{
     width:80%;
-margin-left:80px
+margin-left:70px
 }
+  .boxes1 p:first-of-type {
+    font-size: 1.4rem; /* smaller heading */
+    margin-left: -7rem !important;
+  }
+
+  .boxes1 p:nth-of-type(2),
+  .boxes1 p:last-of-type {
+    padding-left: 2rem;
+    padding-right: 1rem;
+    font-size: 0.9rem;
+    width: 80%;
+    margin-top: -10px;
+  }
+
+  .boxes1 p:last-of-type {
+    font-size: 0.625rem;
+    margin-top:8px
+  }
 .Name{
     margin-left:rem
 }
@@ -991,25 +1108,25 @@ margin-left:80px
   }
 
   .box-title {
-    font-size: 18px;
-    margin-left: -130px !important;
+    font-size: 22px;
+    margin-left: -21rem !important;
     margin-top: -10px;
   }
 
   .box-subtitle {
-    font-size: 15px;
-margin-top: -9px;
+    font-size: 18px;
+margin-top: -17px;
    
   }
 
   .box-desc {
-    font-size: 12px;
-    margin-top: -10px;
+    font-size: 15px;
+    margin-top: -13px;
  
   }
 
   .box-batch {
-    font-size: 10px;
+    font-size: 11px;
     
   }
 
@@ -1041,17 +1158,19 @@ margin-top: -9px;
   
 .paru1{
  
-    font-size: 20px !important;
+    font-size: 24px !important;
 }
 .paru2{
-    font-size: 15px !important;
-    margin-top:-16px !important
+    font-size: 18px !important;
+    margin-top:-20px !important
 }
 .paru3{
-    margin-top: -9px !important;
+    margin-top: -16px !important;
+    font-size: 1rem !important;
+    font-weight: 600;
 }
 .paru4{
-    margin-top:-9px !important
+    margin-top:-12px !important
 }
 #boxes4{
     display: none;
@@ -1110,6 +1229,7 @@ margin-top: -9px;
     margin-top: 5px;
     margin-right: 12px;
       margin-left: -12px;
+   
 
   }
   .lasto p{

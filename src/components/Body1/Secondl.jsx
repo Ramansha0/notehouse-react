@@ -109,9 +109,9 @@ const Secondl = () => {
               <p
                 style={{
                   fontSize: '25px',
-                  fontWeight: '600',
+                  fontWeight: '700',
                   marginLeft: '30px',
-                  paddingTop: '10px',
+                  paddingTop: '5px',
                 }}
               >
                 NEB CLASS - XI{' '}</p>
@@ -119,7 +119,7 @@ const Secondl = () => {
                   style={{
                     fontSize: '20px',
                     fontWeight: '600',
-                    marginTop: '-20px',
+                    marginTop: '-25px',
                     marginLeft: '30px',
                   }}
                 >
