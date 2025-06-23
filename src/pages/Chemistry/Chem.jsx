@@ -53,8 +53,7 @@ const Chem = () => {
 
   return (
     <div>
-          <button className='topbtn'onClick={()=> document.getElementById("books")?.scrollIntoView({behavior :"smooth"})} style={{ display: showElement ? 'block' : 'none' }}>View Books !</button>
-      <div className="subject">
+          <div className="subject">
         <img className="glass" src="https://thumbs.dreamstime.com/b/colorful-chemistry-lab-flasks-test-tubes-experiments-science-research-education-liquids-analy-illustration-various-filled-358839813.jpg" alt="Chemistry" />
         <p id='topic' className="topic">Chemistry</p>
       </div>

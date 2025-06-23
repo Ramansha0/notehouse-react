@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../../App.css';
+import '../../utils/notehouse'
 import { FaSearch } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState, useRef, useEffect } from 'react';
@@ -74,7 +75,7 @@ const Navbar = () => {
           <ul>
 <li><Link to="/" style={{ textDecoration: "none", color: "white" }}>            <div className="cliked"><FaHome/> Home</div></Link></li>
             <li><Link to="/" state={{ scrollTo: "contact-page" }} style={{ textDecoration: "none", color: "white" }} className="c-btn"><div className="cliked"> <IoCallSharp/> Contact Us</div></Link></li>
-            <li><a className="perso" id="personal1"> <FaUserAlt/> Personal Info</a></li>
+            <li><a   onClick={() => { window.location.href = "https://ramansha0.github.io/Portfolio/"; }} className="perso" id="personal1" > <FaUserAlt/> Personal Info</a></li>
             <li><Link to="/" state={{ scrollTo: "about-section" }} style={{ textDecoration: "none", color: "white" }} className="about1"><div className="cliked"><TfiSharethis /> About Us</div></Link></li>
           </ul>
         <li>

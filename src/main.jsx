@@ -9,6 +9,7 @@ import Math from './pages/Math/Math.jsx';
 import Computer from'./pages/Computer/Computer.jsx'
 import Nepali from './pages/Nepali/Nepali.jsx'
 import English from './pages/English/English.jsx'
+import Mainbook from './pages/Physics/Physics-book.jsx';
 function Layout() {
 
     const { pathname } = useLocation();
@@ -28,9 +29,24 @@ function Layout() {
   <Route path="/nepali" element={<Nepali />} />
   <Route path="/english" element={<English />} />
   
+{/*for the book section*/}
+<Route path="/physics-book" element={<Mainbook/>}/>
+
+
+
+
+
+
+
+
   {/* 404 should be last */}
   <Route path="*" element={<h1>404 - Page Not Found</h1>} />
 </Routes>
+
+
+
+
+
 
     </div>
   );

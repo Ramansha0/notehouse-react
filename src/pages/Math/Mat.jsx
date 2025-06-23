@@ -55,8 +55,7 @@ const Mat = () => {
 
   return (
     <div>
-       <button className='topbtn'onClick={()=> document.getElementById("books")?.scrollIntoView({behavior :"smooth"})} style={{ display: showElement ? 'block' : 'none' }}>View Books !</button>
-      <div className="subject">
+         <div className="subject">
         <img className="glass" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIf1UsthSmB9pgA9nA9TOBHuGEi5SBcciJpQ&s" alt="Math" />
         <p id='topic' className="topic">Mathematics</p>
       </div>

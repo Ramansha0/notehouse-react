@@ -69,8 +69,7 @@ useEffect(() => {
 
   return (
     <div>
-      <button className='topbtn'onClick={()=> document.getElementById("books")?.scrollIntoView({behavior :"smooth"})} style={{ display: showElement ? 'block' : 'none' }}>View Books !</button>
-      <div className="subject">
+           <div className="subject">
         <img
           className="glass"
           src="https://cdn3.vectorstock.com/i/1000x1000/97/62/basic-physics-icon-related-to-education-two-vector-45329762.jpg" // Update the image path

@@ -7,7 +7,7 @@ import { initNotehouseScripts } from '../../utils/notehouse';
 import Navbar from '../../components/Navbar/Navbar.jsx';
 import '../../utils/subject.css';
 import Footer from '../../components/Footer/Footer.jsx';
-import Books from '../../components/Body1/Books.jsx';
+
 
 const Physics = () => {
 
@@ -21,10 +21,7 @@ const Physics = () => {
       <Navbar />
       <Phy />
       <Secondl />
-      <Books
-        title="📘 Class 11 Physics Full Book"
-        description="Read the complete NEB Physics book online. Click the button below to start viewing."
-      />
+    
       <Footer />
     </div>
   );

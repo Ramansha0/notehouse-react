@@ -515,6 +515,10 @@ li {
   box-sizing: border-box;
   margin-bottom: 50px;
 }
+.boxes1{
+  -webkit-tap-highlight-color: transparent; /* For mobile Chrome/Safari */
+  -webkit-touch-callout: none;              /* Disable long-press menu on iOS */
+}
 
 .boxes1,.boxes2:hover{
   cursor: pointer;
@@ -608,6 +612,8 @@ li {
   border: none;
   margin-top: 5px;
   cursor: pointer;
+    border-radius: 0px;
+
 }
 .dropdown{
   margin-left:45vw;
@@ -617,6 +623,11 @@ li {
 
 /* 🔽 Responsive adjustments */
 @media (max-width: 600px) {
+.form-button{
+  width:100px;
+  border-radius: 0px;
+}
+
   .boxes1 p:first-of-type {
     font-size: 1rem; /* smaller heading */
     margin-left: -18px;

@@ -53,7 +53,6 @@ const Nep = () => {
 
   return (
     <div>
-       <button className='topbtn'onClick={()=> document.getElementById("books")?.scrollIntoView({behavior :"smooth"})} style={{ display: showElement ? 'block' : 'none' }}>View Books !</button>
       <div className="subject">
         <img className="glass" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeVvVyMV-SmJJENZvscnkro9onxXdCIARfxg&s" alt="Nepali" />
         <p id='topic' className="topic">नेपाली</p>

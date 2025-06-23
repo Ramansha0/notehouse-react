@@ -51,8 +51,7 @@ const Eng = () => {
   }, [location]);
 
   return (
-    <div> <button className='topbtn'onClick={()=> document.getElementById("books")?.scrollIntoView({behavior :"smooth"})} style={{ display: showElement ? 'block' : 'none' }}>View Books !</button>
-      <div className="subject">
+    <div>  <div className="subject">
         <img className="glass" src="https://static.vecteezy.com/system/resources/thumbnails/017/300/766/small_2x/learning-english-doodle-set-language-school-in-sketch-style-online-language-education-course-hand-drawn-illustration-isolated-on-white-background-vector.jpg" alt="English" />
         <p id='topic' className="topic">English</p>
       </div>

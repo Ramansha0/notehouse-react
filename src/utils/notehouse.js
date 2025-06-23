@@ -57,12 +57,6 @@ export function initNotehouseScripts() {
     }, delay);
   };
 
-  const personal1 = document.getElementById("personal1");
-  if (personal1) {
-    personal1.addEventListener("click", () => {
-      redirectWithLoader("https://ramansha0.github.io/Portfolio/");
-    });
-  }
 
   const redict = document.getElementById("redict");
   if (redict) {
