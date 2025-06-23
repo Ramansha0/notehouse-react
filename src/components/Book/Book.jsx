@@ -7,13 +7,8 @@ const Book = ({ title, description, pdfName }) => {
   const [shown, setShown] = useState(false);
 
   const handleShowPDF = () => {
-    setShown(true); // Only show PDF, not toggle
-    setTimeout(() => {
-      const viewer = document.getElementById('pdfViewer');
-      if (viewer) {
-        window.scrollTo({ top: viewer.offsetTop - 50, behavior: 'smooth' });
-      }
-    }, 100);
+    setShown(true);
+
   };
 
   return (

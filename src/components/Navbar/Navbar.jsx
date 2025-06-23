@@ -59,7 +59,7 @@ const Navbar = () => {
         <ul id="nav-list" className="nav-list" style={{ border: 'none', boxShadow: 'none' }}>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/" state={{ scrollTo: "contact-page" }} className="c-btn">Contact Us</Link></li>
-          <li><a className="perso" id="personal1">Personal Info</a></li>
+          <li><a className="perso" id="personal1" onClick={()=>{window.location.href ="https://ramansha0.github.io/Portfolio/"}}>Personal Info</a></li>
           <li><Link to="/" state={{ scrollTo: "about-section" }} className="about1">About Us</Link></li>
         </ul>
 

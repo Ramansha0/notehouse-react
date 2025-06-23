@@ -123,7 +123,7 @@ const Body = () => {
                   src="https://static.vecteezy.com/system/resources/thumbnails/004/251/195/small/learning-mathematics-of-education-and-knowledge-background-cartoon-illustration-science-technology-engineering-formula-or-basic-math-vector.jpg"
                   alt="Math"
                 />
-                <Link to="/" id="classy1" className="btn btn-secondary" state = {{scrolldown :"nextpage1"}}>Notes</Link>
+                <Link to="/math-book" id="classy1" className="btn btn-secondary" state = {{scrolldown :"nextpage1"}}>Notes</Link>
               </div>
 
               <div className="course1">
@@ -142,7 +142,7 @@ const Body = () => {
                   alt="Chemistry"
                   style={{ height: '150px', objectFit: 'contain' }}
                 />
-                <Link to="/" id="classy3" className="btn btn-secondary"  state = {{scrolldown :"nextpage1"}}>Notes</Link>
+                <Link to="/chemistry-book" id="classy3" className="btn btn-secondary"  state = {{scrolldown :"nextpage1"}}>Notes</Link>
               </div>
             </div>
 
@@ -154,7 +154,7 @@ const Body = () => {
                   alt=""
                   style={{ height: '150px', objectFit: 'contain' }}
                 />
-                <Link to="/" id="classy4" className="btn btn-secondary" state = {{scrolldown :"nextpage1"}}>Notes</Link>
+                <Link to="/nepali-book" id="classy4" className="btn btn-secondary" state = {{scrolldown :"nextpage1"}}>Notes</Link>
               </div>
 
               <div className="course1">
@@ -169,7 +169,7 @@ const Body = () => {
                 }}>
                   A
                 </h1>
-                <Link to="/" id="classy5" className="btn btn-secondary" state = {{scrolldown :"nextpage1"}}>Notes</Link>
+                <Link to="/english-book" id="classy5" className="btn btn-secondary" state = {{scrolldown :"nextpage1"}}>Notes</Link>
               </div>
 
               <div className="course1">
@@ -178,7 +178,7 @@ const Body = () => {
                   src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg"
                   alt="Computer"
                 />
-                <Link to="/" id="classy6" className="btn btn-secondary" state = {{scrolldown :"nextpage1"}}>Notes</Link>
+                <Link to="/computer-book" id="classy6" className="btn btn-secondary" state = {{scrolldown :"nextpage1"}}>Notes</Link>
               </div>
             </div>
           </div>
