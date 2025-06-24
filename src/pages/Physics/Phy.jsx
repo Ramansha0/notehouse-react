@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { IoIosArrowDropdown } from "react-icons/io";
 
@@ -95,7 +95,7 @@ useEffect(() => {
             </p>
             <p >Batch - 2081</p>
           </div>
-          <div className="boxes1" onClick={() => { change2(); document.getElementById("nextpage1")?.scrollIntoView({ behavior: "smooth" }) }}>
+      <Link to="physics-book" style={{ color:'Black',textDecoration:'-40px'}}  >    <div className="boxes1" >
             <p style={{
               marginLeft:'-40px'
             }}>
@@ -104,7 +104,7 @@ useEffect(() => {
             <p > Here you can find almost every revised note of physics.
             </p>
             <p >Batch - 2081</p>
-          </div>
+          </div></Link>
         </div>
         <div className="Chapters">
           <div className="Name">

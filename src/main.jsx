@@ -15,6 +15,9 @@ import Mathbook from './pages/Math/Mathbook.jsx'
 import Englishbook from './pages/English/Englishbook.jsx'
 import Chemistrybook from './pages/Chemistry/Chemistrybook.jsx'
 import Computerbook from './pages/Computer/Computerbook.jsx'
+import Phy from './pages/Physics/Phy.jsx'
+
+
 function Layout() {
 
   const { pathname } = useLocation();
