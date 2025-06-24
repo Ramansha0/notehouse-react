@@ -99,7 +99,7 @@ useEffect(() => {
             <p style={{
               marginLeft:'-40px'
             }}>
-              NEB CLASS - XI Physics  Bookss
+              NEB CLASS - XI Physics  Books
             </p>
             <p > Here you can find almost every revised note of physics.
             </p>

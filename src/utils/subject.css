@@ -635,9 +635,13 @@ margin-left: -1rem !important;
   font-size: 20px;
   font-weight: 800;
 }
-
-/* 🔽 Responsive adjustments */
-@media (max-width: 600px) {
+@media (min-width: 390px) and (max-width:420px) {
+  .boxes1 p:first-of-type {
+    font-size: 1.1rem; /* smaller heading */
+    margin-left: -12px !important;
+  }
+}
+@media (min-width: 330px) and (max-width:400px) {
 .form-button{
   width:100px;
   border-radius: 0px;
@@ -645,7 +649,7 @@ margin-left: -1rem !important;
 
   .boxes1 p:first-of-type {
     font-size: 1.1rem; /* smaller heading */
-    margin-left: -2.rem !important;
+    margin-left: -12px !important;
   }
 
   .boxes1 p:nth-of-type(2),
@@ -660,6 +664,92 @@ margin-left: -1rem !important;
   .boxes1 p:last-of-type {
     font-size: 0.625rem;
   }
+
+  .boxes2 {
+    width: 90% !important;
+
+    margin-left: 0 !important;
+    margin-top: 20px !important;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .box-title {
+    font-size: 16px !important;
+    margin-left: -130px !important;
+    margin-top: -10px;
+  }
+
+  .box-subtitle {
+    font-size: 16px;
+margin-top: -13px !important;
+   
+  }
+
+  .box-desc {
+    font-size: 12px;
+    margin-top: -12px;
+ 
+  }
+
+  .box-batch {
+    font-size: 10px !important;
+    
+  }
+
+
+
+
+}
+
+/* 🔽 Responsive adjustments */
+@media (min-width:390px) and(max-width: 600px) {
+.form-button{
+  width:100px;
+  border-radius: 0px;
+}
+
+  .boxes1 p:first-of-type {
+    font-size: 1.1rem; /* smaller heading */
+   margin-left:300px !important
+  }
+
+  .boxes1 p:nth-of-type(2),
+  .boxes1 p:last-of-type {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.9rem;
+    width: 80%;
+    margin-top: -10px;
+  }
+
+  .boxes1 p:last-of-type {
+    font-size: 0.625rem;
+  }
+   .box-title {
+    font-size: 22px  !important;
+    margin-left: -130px !important;
+    margin-top: -10px;
+  }
+
+  .box-subtitle {
+    font-size: 16px;
+margin-top: -18px;
+   
+  }
+
+  .box-desc {
+    font-size: 12px;
+    margin-top: -12px;
+ 
+  }
+
+  .box-batch {
+    font-size: 10px;
+    
+  }
+ 
+  
 }
 
 
@@ -677,6 +767,16 @@ margin-left: -1rem !important;
   
 
   }
+    .btnandtitle p{
+    margin-left: -50px ;
+  }
+  .click{
+width:86px;
+margin-left: 10px;
+padding-left: 7px !important;
+padding-bottom: 30px !important;
+  }
+  
     .topbtn {
     margin-left: 20vw !important;
 
@@ -693,8 +793,8 @@ position: relative !important;
     flex-direction: column;
 }
 .boxes1{
-    width:80%;
-margin-left:40px
+    width:86%;
+margin-left:27px
 }
 .Name{
     margin-left:7.2rem !important
@@ -763,7 +863,7 @@ margin-left:40px
   }
 
   .box-title {
-    font-size: 20px;
+    font-size: 22px ;
     margin-left: -130px !important;
     margin-top: -10px;
   }
@@ -1019,7 +1119,7 @@ margin-left:70px
 }
   .boxes1 p:first-of-type {
     font-size: 1.5rem !important; /* smaller heading */
-    margin-left: -rem !important;
+    margin-left: -12rem !important;
   }
 
   .boxes1 p:nth-of-type(2),
