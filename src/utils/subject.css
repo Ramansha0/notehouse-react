@@ -1398,9 +1398,7 @@ margin-top: -17px;
   transition: transform 0.3s ease;
 }
 
-.container:hover {
-  transform: scale(1.01);
-}
+
 
 h1 {
   text-align: center;
