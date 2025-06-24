@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { IoIosArrowDropdown } from "react-icons/io";
 
 const Mat = () => {
   const [showup, setShowup] = useState(false);
   const [pdf, setPdf] = useState(true);
+
+  const navigate = useNavigate();
+
+  const handleGoToThirdPage = () => {
+    navigate('/math-book'); // replace with your actual route
+  };
+
+
 
   const viewport = () => {
     setShowup(!showup);
@@ -67,12 +75,12 @@ const Mat = () => {
             <p>Here you can find almost every revised note of mathematics.</p>
             <p>Batch - 2081</p>
           </div>
-          <div className="boxes1" onClick={() => { change1(); document.getElementById("nextpage1")?.scrollIntoView({ behavior: "smooth" }) }}>
+          <div className="boxes1" onClick={() => { handleGoToThirdPage();change1(); }}>
             <p>NEB CLASS - XI Maths Set Books</p>
             <p>Here you can find all chapters from the official set book.</p>
             <p>Batch - 2081</p>
           </div>
-          <div className="boxes1" onClick={() => { change2(); document.getElementById("nextpage1")?.scrollIntoView({ behavior: "smooth" }) }}>
+          <div className="boxes1" onClick={() => { handleGoToThirdPage();change1(); }}>
             <p>NEB CLASS - XI Mathematics Book</p>
             <p>Here you can access the full NEB mathematics book.</p>
             <p>Batch - 2081</p>

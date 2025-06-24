@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+
 import { useLocation } from 'react-router-dom';
 import { IoIosArrowDropdown } from "react-icons/io";
-
+import { useNavigate } from 'react-router-dom';
 
 const Phy = () => {
   const [showup, setShowup] = useState(false);
   const [pdf, setPdf] = useState(true);
 
+  const navigate = useNavigate();
 
+  const handleGoToThirdPage = () => {
+    navigate('/physics-book'); // replace with your actual route
+  };
 
 const close =()=>{
   alert("clciked")
@@ -87,7 +91,7 @@ useEffect(() => {
             </p>
             <p >Batch - 2081</p>
           </div>
-          <div className="boxes1" onClick={() => { change1(); document.getElementById("nextpage1")?.scrollIntoView({ behavior: "smooth" }) }}>
+          <div className="boxes1" onClick={() => { handleGoToThirdPage();change1(); }}>
             <p>
               NEB CLASS - XI Physics Set Book
             </p>
@@ -95,7 +99,7 @@ useEffect(() => {
             </p>
             <p >Batch - 2081</p>
           </div>
-      <Link to="physics-book" style={{ color:'Black',textDecoration:'-40px'}}  >    <div className="boxes1" >
+         <div className="boxes1"  onClick={handleGoToThirdPage}>
             <p style={{
               marginLeft:'-40px'
             }}>
@@ -104,7 +108,7 @@ useEffect(() => {
             <p > Here you can find almost every revised note of physics.
             </p>
             <p >Batch - 2081</p>
-          </div></Link>
+          </div>
         </div>
         <div className="Chapters">
           <div className="Name">

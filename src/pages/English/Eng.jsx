@@ -1,10 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { IoIosArrowDropdown } from "react-icons/io";
 
 const Eng = () => {
   const [showup, setShowup] = useState(false);
   const [pdf, setPdf] = useState(true);
+
+  const navigate = useNavigate();
+
+  const handleGoToThirdPage = () => {
+    navigate('/english-book'); // replace with your actual route
+  };
+
+
+
+
+
+
 
   const viewport = () => {
     setShowup(!showup);
@@ -63,12 +75,12 @@ const Eng = () => {
             <p>Here you can find almost every revised note of English subject.</p>
             <p>Batch - 2081</p>
           </div>
-          <div className="boxes1" onClick={() => { change1(); document.getElementById("nextpage1")?.scrollIntoView({ behavior: "smooth" }) }}>
+          <div className="boxes1" onClick={() => { handleGoToThirdPage();change1(); }}>
             <p>NEB CLASS-XI English Set Book</p>
             <p>All prose, poetry, and grammar from the curriculum set book.</p>
             <p>Batch - 2081</p>
           </div>
-          <div className="boxes1" onClick={() => { change2(); document.getElementById("nextpage1")?.scrollIntoView({ behavior: "smooth" }) }}>
+          <div className="boxes1" onClick={() => { handleGoToThirdPage();change1(); }}>
             <p>NEB CLASS - XI English Full Book</p>
             <p>Access the complete English book for NEB Class 11.</p>
             <p>Batch - 2081</p>

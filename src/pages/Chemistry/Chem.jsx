@@ -1,10 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { IoIosArrowDropdown } from "react-icons/io";
 
 const Chem = () => {
   const [showup, setShowup] = useState(false);
   const [pdf, setPdf] = useState(true);
+
+  const navigate = useNavigate();
+
+  const handleGoToThirdPage = () => {
+    navigate('/chemistry-book'); // replace with your actual route
+  };
+
+
+
+
 
   const viewport = () => {
     setShowup(!showup);
@@ -65,12 +75,12 @@ const Chem = () => {
             <p>Here you can find almost every revised notes of chemistry.</p>
             <p>Batch - 2081</p>
           </div>
-          <div className="boxes1" onClick={() => { change1(); document.getElementById("nextpage1")?.scrollIntoView({ behavior: "smooth" }) }}>
+          <div className="boxes1" onClick= {handleGoToThirdPage}>
             <p>NEB CLASS - XI Chem Set Books</p>
             <p>Here you can find almost every revised notes of chemistry.</p>
             <p>Batch - 2081</p>
           </div>
-          <div className="boxes1" onClick={() => { change2(); document.getElementById("nextpage1")?.scrollIntoView({ behavior: "smooth" }) }}>
+          <div className="boxes1" onClick={ handleGoToThirdPage}>
             <p>NEB CLASS - XI Chemistry Books</p>
             <p>Here you can find almost every revised notes of chemistry.</p>
             <p>Batch - 2081</p>

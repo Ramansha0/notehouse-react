@@ -1,10 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { IoIosArrowDropdown } from "react-icons/io";
 
 const Nep = () => {
   const [showup, setShowup] = useState(false);
   const [pdf, setPdf] = useState(true);
+
+  const navigate = useNavigate();
+
+  const handleGoToThirdPage = () => {
+    navigate('/nepali-book'); // replace with your actual route
+  };
+
+
+
+
 
   const viewport = () => {
     setShowup(!showup);
@@ -66,12 +76,12 @@ const Nep = () => {
             <p>यहाँ तपाईंले कक्षा ११ का सम्पूर्ण नेपाली नोट्स पाउन सक्नुहुन्छ।</p>
             <p>ब्याच - २०८१</p>
           </div>
-          <div className="boxes1" onClick={() => { change1(); document.getElementById("nextpage1")?.scrollIntoView({ behavior: "smooth" }) }}>
+          <div className="boxes1" onClick={() => { handleGoToThirdPage();change1(); }}>
             <p>NEB कक्षा - ११  नेपाली  पाठ्यपुस्तकहरू</p>
             <p>यहाँ तपाईंले नेपाली विषयको सम्पूर्ण पाठ्यपुस्तक हेर्न सक्नुहुन्छ।</p>
             <p>ब्याच - २०८१</p>
           </div>
-          <div className="boxes1" onClick={() => { change2(); document.getElementById("nextpage1")?.scrollIntoView({ behavior: "smooth" }) }}>
+          <div className="boxes1" onClick={() => { handleGoToThirdPage();change1(); }}>
             <p>NEB कक्षा - ११ नेपाली सेट 
 पुस्तकहरू</p>
             <p>यहाँ तपाईंले अभ्यासका लागि सेट प्रश्नपत्रहरू पाउन सक्नुहुन्छ।</p>
