@@ -91,7 +91,7 @@ useEffect(() => {
             </p>
             <p >Batch - 2081</p>
           </div>
-          <div className="boxes1" onClick={() => { handleGoToThirdPage();change1(); }}>
+          <div className="boxes1" onClick={handleGoToThirdPaggiot}>
             <p>
               NEB CLASS - XI Physics Set Book
             </p>

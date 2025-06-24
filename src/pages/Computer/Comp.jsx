@@ -77,12 +77,12 @@ const Comp = () => {
             <p>Here you can find almost every revised note of computer science.</p>
             <p>Batch - 2081</p>
           </div>
-          <div className="boxes1" onClick={() => { handleGoToThirdPage(); }}>
+          <div className="boxes1" onClick={ handleGoToThirdPage}>
             <p>NEB CLASS-XI Computer Set Book</p>
             <p>Here you can find all chapters from the official set book.</p>
             <p>Batch - 2081</p>
           </div>
-          <div className="boxes1" onClick={() =>{ handleGoToThirdPage(); }}>
+          <div className="boxes1" onClick={ handleGoToThirdPagew}>
             <p>NEB CLASS  - XI Computers  Books</p>
             <p>Here you can access the full NEB computer science book.</p>
             <p>Batch - 2081</p>
