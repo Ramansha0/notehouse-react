@@ -1,6 +1,18 @@
 import React from 'react'
 import '../../utils/subject.css';
+import { useLocation, useNavigate } from 'react-router';
 const Secondl = () => {
+const navigate = useNavigate();
+const gooncomputer= () =>{
+  navigate('/computer')
+}
+
+const goonnepali = () =>{
+  navigate('/nepali')
+}
+const goonenglish = () =>{
+  navigate('/english')
+}
   return (
     <div>
     <div className="contain">
@@ -17,7 +29,7 @@ const Secondl = () => {
         <h1 style={{ marginTop: '0px' }}>Other Subject Notes:</h1>
         <div className="twoside" style={{ display: 'flex' }}>
           <div className="left">
-            <div
+            <div  onClick={gooncomputer}
               style={{ width: '450px', height: '135px', marginTop: '30px' }}
              id="boxes3" className="boxes3"
             >
@@ -38,7 +50,7 @@ const Secondl = () => {
                     marginLeft: '30px',
                   }}
                 >
-                  Revised Physics Notes
+                  Revised computer Notes
                 </p>
         
               <p className='paru3'
@@ -56,7 +68,7 @@ const Secondl = () => {
                 Batch - 2081
               </p>
             </div>
-                  <div
+                  <div onClick={goonnepali}
               style={{ width: '450px', height: '135px', marginTop: '30px' }}
               className="boxes3"
             >
@@ -97,7 +109,7 @@ const Secondl = () => {
             </div>
           </div>
           <div className="right">
-            <div
+            <div        onClick={goonenglish}
               style={{
                 width: '450px',
                 height: '135px',
