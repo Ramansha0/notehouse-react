@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { IoIosArrowDropdown } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
@@ -91,8 +91,7 @@ useEffect(() => {
             </p>
             <p >Batch - 2081</p>
           </div>
-          <div className="boxes1" onClick={handleGoToThirdPaggiot}>
-            <p>
+ <div className="boxes1"  onClick={handleGoToThirdPage}>  <p>
               NEB CLASS - XI Physics Set Book
             </p>
             <p > Here you can find almost every revised note of physics.

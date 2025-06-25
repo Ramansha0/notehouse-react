@@ -8,8 +8,8 @@ const Mat = () => {
 
   const navigate = useNavigate();
 
-  const handleGoToThirdPage = () => {
-    navigate('/math-book'); // replace with your actual route
+  const go= () => {
+    navigate("/math-book"); // replace with your actual route
   };
 
 
@@ -75,12 +75,12 @@ const Mat = () => {
             <p>Here you can find almost every revised note of mathematics.</p>
             <p>Batch - 2081</p>
           </div>
-          <div className="boxes1" onClick={() => { handleGoToThirdPage();change1(); }}>
+  <div className="boxes1" onClick={ go}>
             <p>NEB CLASS - XI Maths Set Books</p>
             <p>Here you can find all chapters from the official set book.</p>
             <p>Batch - 2081</p>
           </div>
-          <div className="boxes1" onClick={() => { handleGoToThirdPage();change1(); }}>
+     <div className="boxes1" onClick={ go}>
             <p>NEB CLASS - XI Mathematics Book</p>
             <p>Here you can access the full NEB mathematics book.</p>
             <p>Batch - 2081</p>
