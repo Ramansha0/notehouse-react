@@ -2,7 +2,15 @@ import React from 'react'
 import Navbar from '../../components/Navbar/Navbar.jsx'
 import Book from '../../components/Book/Book.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
+import { initNotehouseScripts } from '../../utils/notehouse';
 const Englishbook = () => {
+  
+useEffect(() => {
+    initNotehouseScripts();
+  }, []);
+
+
+
   return (
     <div>
       <Navbar/>

@@ -130,11 +130,11 @@ export function initNotehouseScripts() {
         // Redirect to pages based on keyword match
         if (selected.includes("chemistry")) {
           window.location.href = "/chemistry";
-        }   else if (selected.includes(" book")) {
+        }   else if (selected.includes(" physics book")) {
           window.location.href = "/english-book";
-        } else if (selected.includes(" book")) {
+        } else if (selected.includes(" english book")) {
           window.location.href = "/nepali-book";
-        }else if (selected.includes(" book")) {
+        }else if (selected.includes("neplai book")) {
           window.location.href = "/physics-book";
         } 
         
