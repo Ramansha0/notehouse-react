@@ -78,80 +78,70 @@ export function initNotehouseScripts() {
     );
     observer.observe(paragraph);
   }
-const searchbox = document.querySelector(".search");
-const show = document.querySelector(".anything");
 
-const questions = [
-  "chemistry notes",
-  "physics formulas",
-  "biology diagram",
-  "class 11 math notes",
-  "nepali summary",
-  "english grammar rules",
-  "important long questions",
-  "short questions answers",
-  "science project ideas",
-  "computer assignment pdf",
-  "math model questions",
-  "chapterwise notes",
-  "class 12 solutions",
-  "chemical reactions notes",
-  "thermodynamics formulas",
-  "organic chemistry basics",
-  "electric circuits formulas",
-  "optics physics notes",
-  "animal kingdom classification",
-  "chemical bonding types"
-];
 
-function displayResults(results) {
-  if (!show) return;
+    const searchbox = document.querySelector(".search");
+  const show = document.querySelector(".anything");
 
-  if (results.length === 0) {
-    show.innerHTML = "<p class='not-found'>No results found</p>";
-  } else {
-    show.innerHTML = results
-      .map(
-        (item) =>
-          `<p class="suggestion" data-item="${item}">${item}</p>`
-      )
-      .join("");
+  const questions = [
+    "chemistry notes", "physics formulas", "biology diagram", "class 11 math notes",
+    "nepali summary", "english grammar rules", "important long questions",
+    "short questions answers", "science project ideas", "computer assignment pdf",
+    "math model questions", "chapterwise notes", "class 12 solutions",
+    "chemical reactions notes", "thermodynamics formulas", "organic chemistry basics",
+    "electric circuits formulas", "optics physics notes", "animal kingdom classification",
+    "chemical bonding types"
+  ];
+
+  function displayResults(results) {
+
+
+    searchbox.addEventListener("keyup", () => {
+      show.innerHTML = results
+        .map(item => `<p class="suggestion" data-item="${item}">${item}</p>`)
+        .join("");
+    })
+
+    show.style.display = "block";
   }
 
-  show.style.display = "block";
-
-  // Handle clicks on suggestions
-  const suggestions = document.querySelectorAll(".suggestion");
-  suggestions.forEach((el) => {
-    el.addEventListener("click", (e) => {
-      const selected = e.target.dataset.item;
-
-      // Redirect based on selected item
-      if (selected.includes("chemistry")) {
-        window.location.href = "/chemistry-book";
-      } else if (selected.includes("physics")) {
-        window.location.href = "/physics";
-      } else if (selected.includes("biology")) {
-        window.location.href = "/class11/biology";
-      }
-      // Add more conditions as needed
+  if (searchbox && show) {
+    // Handle typing in search bar
+    searchbox.addEventListener("keyup", () => {
+      const value = searchbox.value.toLowerCase();
+      const filtered = questions.filter(q => q.includes(value));
+      displayResults(value ? filtered : []);
     });
-  });
-}
 
-if (searchbox && show) {
-  searchbox.addEventListener("keyup", () => {
-    const value = searchbox.value.toLowerCase();
-    const filtered = questions.filter((q) =>
-      q.toLowerCase().includes(value)
-    );
-    displayResults(value ? filtered : []);
-  });
+    // Handle clicking outside to hide suggestions
+    document.addEventListener("click", (e) => {
+      if ( !show.contains(e.target)) {
+        show.style.display = "none";
+        searchbox.value = ""
+      }
+    });
 
-  document.addEventListener("click", (e) => {
-    if (!searchbox.contains(e.target) && !show.contains(e.target)) {
-      show.style.display = "none";
-    }
-  });
-}
+    // Handle clicking on suggestion item
+    show.addEventListener("click", (event) => {
+      const clicked = event.target;
+ 
+        const selected = clicked.dataset.item.toLowerCase();
+
+        // Redirect to pages based on keyword match
+        if (selected.includes("chemistry")) {
+          window.location.href = "/class11/chemistry";
+        } else if (selected.includes("physics")) {
+          window.location.href = "/class11/physics";
+        } else if (selected.includes("math")) {
+          window.location.href = "/class11/mathematics";
+        } else if (selected.includes("english")) {
+          window.location.href = "/class11/english";
+        } else if (selected.includes("nepali")) {
+          window.location.href = "/class11/nepali";
+        } else {
+          window.location.href = "/not-found";
+        }
+      
+    });
+  }
 }
