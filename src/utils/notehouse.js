@@ -90,7 +90,7 @@ export function initNotehouseScripts() {
     "math model questions", "chapterwise notes", "class 12 solutions",
     "chemical reactions notes", "thermodynamics formulas", "organic chemistry basics",
     "electric circuits formulas", "optics physics notes", "animal kingdom classification",
-    "chemical bonding types","physics book","chemistry-book","english book ","neplai book"
+    "chemical bonding types","physics book","chemistry book","english book ","nepali book"
   ];
 
   function displayResults(results) {
@@ -125,43 +125,39 @@ export function initNotehouseScripts() {
     show.addEventListener("click", (event) => {
       const clicked = event.target;
  
-        const selected = clicked.dataset.item.toLowerCase();
+      const selected = clicked.dataset.item.toLowerCase();
 
-        // Redirect to pages based on keyword match
-        if (selected.includes("chemistry")) {
-          window.location.href = "/chemistry";
-        }   else if (selected.includes(" physics book")) {
-          window.location.href = "/english-book";
-        } else if (selected.includes(" english book")) {
-          window.location.href = "/nepali-book";
-        }else if (selected.includes("neplai book")) {
-          window.location.href = "/physics-book";
-        } 
-        
-        
-        
-        else if (selected.includes("physics")) {
-          window.location.href = "/physics";
-        } else if (selected.includes("math")) {
-          window.location.href = "/mathematics";
-        } else if (selected.includes("english")) {
-          window.location.href = "/english";
-        } else if (selected.includes("nepali")) {
-          window.location.href = "/nepali";
-        } 
-        else if (selected.includes("computer")) {
-          window.location.href = "/computer";
-        } 
-      
-        
-        
-        
-        
-        
-        
-        else {
-          window.location.href = "/not-found";
-        }
+// Book-related pages first
+if (selected.includes("chemistry book")) {
+  window.location.href = "/chemistry-book";
+} else if (selected.includes("physics book")) {
+  window.location.href = "/physics-book";
+} else if (selected.includes("english book")) {
+  window.location.href = "/english-book";
+} else if (selected.includes("nepali book")) {
+  window.location.href = "/nepali-book";
+}
+
+// Now check for subject notes
+else if (selected.includes("chemistry")) {
+  window.location.href = "/chemistry";
+} else if (selected.includes("physics")) {
+  window.location.href = "/physics";
+} else if (selected.includes("math")) {
+  window.location.href = "/mathematics";
+} else if (selected.includes("english")) {
+  window.location.href = "/english";
+} else if (selected.includes("nepali")) {
+  window.location.href = "/nepali";
+} else if (selected.includes("computer")) {
+  window.location.href = "/computer";
+}
+
+// If nothing matched
+else {
+  window.location.href = "/not-found";
+}
+
       
     });
   }
