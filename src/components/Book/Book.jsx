@@ -25,7 +25,7 @@ const Book = ({ title, description, pdfName }) => {
           Use the button below to view or study the full {title} book online.
         </p>
 
-        <button onClick={handleShowPDF}>📖 Open {title} Book</button>
+        <button onClick={handleShowPDF}>📖 Open {title} Book By CDC</button>
 
         {shown && (
           <div className="pdf-container" id="pdfViewer">
