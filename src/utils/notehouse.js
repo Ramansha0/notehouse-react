@@ -90,7 +90,7 @@ export function initNotehouseScripts() {
     "math model questions", "chapterwise notes", "class 12 solutions",
     "chemical reactions notes", "thermodynamics formulas", "organic chemistry basics",
     "electric circuits formulas", "optics physics notes", "animal kingdom classification",
-    "chemical bonding types"
+    "chemical bonding types","physics book","chemistry-book","english book ","neplai book"
   ];
 
   function displayResults(results) {
@@ -98,7 +98,7 @@ export function initNotehouseScripts() {
 
     searchbox.addEventListener("keyup", () => {
       show.innerHTML = results
-        .map(item => `<p class="suggestion" data-item="${item}">${item}</p>`)
+        .map(item => `<p class="suggestion" style={padding:20px} data-item="${item}">${item}</p>`)
         .join("");
     })
 
@@ -129,16 +129,37 @@ export function initNotehouseScripts() {
 
         // Redirect to pages based on keyword match
         if (selected.includes("chemistry")) {
-          window.location.href = "/class11/chemistry";
-        } else if (selected.includes("physics")) {
-          window.location.href = "/class11/physics";
+          window.location.href = "/chemistry";
+        }   else if (selected.includes(" book")) {
+          window.location.href = "/english-book";
+        } else if (selected.includes(" book")) {
+          window.location.href = "/nepali-book";
+        }else if (selected.includes(" book")) {
+          window.location.href = "/physics-book";
+        } 
+        
+        
+        
+        else if (selected.includes("physics")) {
+          window.location.href = "/physics";
         } else if (selected.includes("math")) {
-          window.location.href = "/class11/mathematics";
+          window.location.href = "/mathematics";
         } else if (selected.includes("english")) {
-          window.location.href = "/class11/english";
+          window.location.href = "/english";
         } else if (selected.includes("nepali")) {
-          window.location.href = "/class11/nepali";
-        } else {
+          window.location.href = "/nepali";
+        } 
+        else if (selected.includes("computer")) {
+          window.location.href = "/computer";
+        } 
+      
+        
+        
+        
+        
+        
+        
+        else {
           window.location.href = "/not-found";
         }
       
