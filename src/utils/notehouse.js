@@ -78,43 +78,80 @@ export function initNotehouseScripts() {
     );
     observer.observe(paragraph);
   }
+const searchbox = document.querySelector(".search");
+const show = document.querySelector(".anything");
 
-  // Search bar filter
-  const searchbox = document.querySelector(".search");
-  const show = document.querySelector(".anything");
+const questions = [
+  "chemistry notes",
+  "physics formulas",
+  "biology diagram",
+  "class 11 math notes",
+  "nepali summary",
+  "english grammar rules",
+  "important long questions",
+  "short questions answers",
+  "science project ideas",
+  "computer assignment pdf",
+  "math model questions",
+  "chapterwise notes",
+  "class 12 solutions",
+  "chemical reactions notes",
+  "thermodynamics formulas",
+  "organic chemistry basics",
+  "electric circuits formulas",
+  "optics physics notes",
+  "animal kingdom classification",
+  "chemical bonding types"
+];
 
-  const questions = [
-    "chemistry notes", "physics formulas", "biology diagram", "class 11 math notes",
-    "nepali summary", "english grammar rules", "important long questions",
-    "short questions answers", "science project ideas", "computer assignment pdf",
-    "math model questions", "chapterwise notes", "class 12 solutions",
-    "chemical reactions notes", "thermodynamics formulas", "organic chemistry basics",
-    "electric circuits formulas", "optics physics notes", "animal kingdom classification",
-    "chemical bonding types"
-  ];
+function displayResults(results) {
+  if (!show) return;
 
-  function displayResults(results) {
-    if (!show) return;
-
-    if (results.length === 0) {
-      show.innerHTML = "<p class='not-found'>No results found</p>";
-    } else {
-      show.innerHTML = results.map(item => `<ul>${item}</ul>`).join("");
-    }
-    show.style.display = "block";
+  if (results.length === 0) {
+    show.innerHTML = "<p class='not-found'>No results found</p>";
+  } else {
+    show.innerHTML = results
+      .map(
+        (item) =>
+          `<p class="suggestion" data-item="${item}">${item}</p>`
+      )
+      .join("");
   }
 
-  if (searchbox && show) {
-    searchbox.addEventListener("keyup", () => {
-      const value = searchbox.value.toLowerCase();
-      const filtered = questions.filter(q => q.includes(value));
-      displayResults(value ? filtered : []);
-    });
+  show.style.display = "block";
 
-    document.addEventListener("click", (e) => {
-      if (!searchbox.contains(e.target) && !show.contains(e.target)) {
-        show.style.display = "none";
+  // Handle clicks on suggestions
+  const suggestions = document.querySelectorAll(".suggestion");
+  suggestions.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      const selected = e.target.dataset.item;
+
+      // Redirect based on selected item
+      if (selected.includes("chemistry")) {
+        window.location.href = "/chemistry-book";
+      } else if (selected.includes("physics")) {
+        window.location.href = "/physics";
+      } else if (selected.includes("biology")) {
+        window.location.href = "/class11/biology";
       }
+      // Add more conditions as needed
     });
-  }
+  });
+}
+
+if (searchbox && show) {
+  searchbox.addEventListener("keyup", () => {
+    const value = searchbox.value.toLowerCase();
+    const filtered = questions.filter((q) =>
+      q.toLowerCase().includes(value)
+    );
+    displayResults(value ? filtered : []);
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!searchbox.contains(e.target) && !show.contains(e.target)) {
+      show.style.display = "none";
+    }
+  });
+}
 }
