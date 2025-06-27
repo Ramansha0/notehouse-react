@@ -27,16 +27,11 @@ const close =()=>{
 
     );
   }
-  const change1 = () => {
-    setPdf("https://www.orimi.com/pdf-test.pdf"); // another sample PDF
-  };
 
-  const change2 = () => {
-    setPdf("https://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf"); // another sample PDF
-  };
 
    const change3 = () => {
-    setPdf("https://www.mozilla.org/media/MPL/2.0/index.815ca599c9df.pdf"); // another sample PDF
+setPdf("/pdf/first%20term%20of%20physics%202080-merged.pdf");
+
   };
  const change4 = () => {
     setPdf("https://file-examples.com/wp-content/uploads/2017/10/file-sample_150kB.pdf"); // another sample PDF
